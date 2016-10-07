@@ -1,0 +1,32 @@
+// =============================================================================
+// - Generycs elements
+// =============================================================================
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+  @include transition(2ms);
+}
+
+body {
+  background-color: $white;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: $white;
+
+  &.ab-hidden {
+    overflow: hidden;
+  }
+}
+
+.browserupgrade {
+  margin: 0 auto;
+  background: $white;
+  color: $orange;
+  padding: 16px;
+}
+
+.audio_player_container {
+  @include size(0, 0);
+  display: none;
+  overflow: hidden;
+}
