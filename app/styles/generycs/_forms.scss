@@ -49,6 +49,12 @@ input {
 	}
 }
 
+form {
+	@include size(100%, auto);
+	overflow: hidden;
+	margin: 0 auto 20px;
+}
+
 .form_control {
 	@include size(100%, auto);
 	margin: 0 auto 19px;
