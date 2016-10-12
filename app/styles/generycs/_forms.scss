@@ -58,6 +58,16 @@ form {
 .form_control {
 	@include size(100%, auto);
 	margin: 0 auto 19px;
+
+	&.flex {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
-
+.date_control {
+	@include size(45%, auto);
+}
