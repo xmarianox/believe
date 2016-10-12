@@ -24,3 +24,14 @@ body {
   color: $orange;
   padding: 16px;
 }
+
+.main-container {
+  @include size(100%, auto);
+  margin-top: 62px;
+  padding: 16px 8px;
+
+  // - Responsive
+  @media #{$breakpoint-smartphone-big} {
+    padding: 16px;
+  }
+}

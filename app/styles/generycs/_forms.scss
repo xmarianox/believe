@@ -1,0 +1,57 @@
+// =============================================================================
+// - forms elements
+// =============================================================================
+// reset placeHolder color
+@include placeholder($gray);
+
+input {
+	@include size(100%, 44px);
+	border: 1px solid $gray;
+	@include border-radius(0px);
+	background-color: $white;
+	appearance: none;
+	padding: 0 8px;
+	// texts
+	font-family: $montserratRegular;
+	@include font-size(20px);
+	@include line-height(44px);
+	text-align: center;
+	color: $gray;
+}
+
+.select_container {
+	@include size(100%, 44px);
+	border: 1px solid $gray;
+	@include border-radius(0px);
+	background-color: $white;
+	padding: 0 8px;
+
+	select {
+		@include size(100%, 100%);
+		border: none;
+		@include border-radius(0px);
+		background-color: $white;
+		appearance: none;
+		// texts
+		font-family: $montserratRegular;
+		@include font-size(20px);
+		@include line-height(44px);
+		text-align: center;
+		color: $gray;
+	}
+
+	option {
+		font-family: $montserratRegular;
+		@include font-size(20px);
+		@include line-height(44px);
+		text-align: center;
+		color: $gray;
+	}
+}
+
+.form_control {
+	@include size(100%, auto);
+	margin: 0 auto 19px;
+}
+
+

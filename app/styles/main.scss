@@ -13,9 +13,12 @@
 @import "generycs/icons";
 @import "generycs/fonts";
 @import "generycs/generycs";
+@import "generycs/forms";
 // components
 @import "components/buttons";
 // =============================================================================
 // -- Main theme
 // =============================================================================
-
+@import "components/appbar";
+// welcome component
+@import "components/welcomeComponent";

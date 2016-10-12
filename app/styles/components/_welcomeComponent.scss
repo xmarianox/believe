@@ -1,0 +1,39 @@
+// =============================================================================
+// - WelcomeContainer
+// =============================================================================
+.welcome {
+	@include size(100%, auto);
+	padding: 8px 0;
+	color: $darkGray;
+
+	h1 {
+		font-family: $montserratBold;
+		@include font-size(18px);
+		@include line-height(24px);
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-family: $montserratRegular;
+		@include font-size(18px);
+		@include line-height(24px);
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	figure {
+		@include size(100%, auto);
+		overflow: hidden;
+	}
+
+	img {
+		@include size(100%, auto);
+		display: block;
+	}
+
+	// - Responsive
+	@media #{$breakpoint-smartphone-big} {
+		padding: 16px;
+	}
+}

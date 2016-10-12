@@ -3,4 +3,10 @@
 // =============================================================================
 .ic {
 	display: inline-block;
+
+	&_logo_believe {
+		background: url(../images/icons/ic_believe.svg) center center no-repeat;
+		background-size: cover;
+		@include size(145px, 48px);
+	}
 }
