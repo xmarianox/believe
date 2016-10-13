@@ -175,9 +175,9 @@
   display: inline-block;
   width: $button-size;
   //height: $button-size/9;
-  height: 2px;
+  height: 6px;
   vertical-align: middle;
-  background: $black;
+  background: $lightBlue;
   transition: $button-transition;
 
   @media #{$breakpoint-smartphone-big} {

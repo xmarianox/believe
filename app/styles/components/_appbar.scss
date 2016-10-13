@@ -4,7 +4,6 @@
 .appbar {
 	@include size(100%, auto);
 	padding: 6px 16px;
-
 	background: $white;
 	overflow: hidden;
 	// position
@@ -13,4 +12,39 @@
 	right: 0;
 	left: 0;
 	z-index: 10;
+	// flex
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+
+	// social networks
+	.social {
+		// flex
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		margin: auto 18px auto auto;
+
+		li {
+			margin: 0 4px;
+			text-align: center;
+		}
+
+		a {
+			@include size(32px, 32px);
+			@include border-radius(50%);
+			overflow: hidden;
+			display: block;
+			background: $lightBlue;
+		}
+	}
+
+
 }
+
