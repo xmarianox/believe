@@ -35,3 +35,22 @@ body {
     padding: 16px;
   }
 }
+
+
+.visible {
+  &_mobile {
+    display: block;
+  }
+  &_desktop {
+    display: none;
+  }
+
+  @media #{$breakpoint-tablet-port} {
+    &_mobile {
+      display: none;
+    }
+    &_desktop {
+      display: block;
+    }
+  }
+}

@@ -32,8 +32,40 @@
 		display: block;
 	}
 
+	// =============================================================================
 	// - Responsive
+	// =============================================================================
 	@media #{$breakpoint-smartphone-big} {
 		padding: 16px;
+	}
+
+	@media #{$breakpoint-tablet-port} {
+
+		&_container {
+			@include size(100%, auto);
+			max-width: $secure-area;
+			margin: 0 auto;
+		}
+
+		h1 {
+			@include font-size(26px);
+			@include line-height(48px);
+		}
+
+		p {
+			margin-bottom: 35px;
+
+			&.long-text {
+				@include font-size(14px);
+				@include line-height(20px);
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	@media #{$breakpoint-laptop-small} {
+		&_container {
+			padding: 0 65px;
+		}
 	}
 }
