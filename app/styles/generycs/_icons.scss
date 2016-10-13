@@ -10,6 +10,12 @@
 		@include size(145px, 48px);
 	}
 
+	&_arrow_right {
+		background: url(../images/icons/right_arrow.svg) center center no-repeat;
+		background-size: cover;
+		@include size(27px, 20px);
+	}
+
 	// Social
 	&_twitter {
 		background: url(../images/icons/social/ic_twitter.svg) center center no-repeat;
