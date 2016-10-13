@@ -53,6 +53,14 @@ form {
 	@include size(100%, auto);
 	overflow: hidden;
 	margin: 0 auto 20px;
+
+    @media #{$breakpoint-tablet-port} {
+		padding: 0 36px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
 }
 
 .form_control {
@@ -65,6 +73,10 @@ form {
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	@media #{$breakpoint-tablet-port} {
+		margin: 0 10px 19px;
 	}
 }
 
