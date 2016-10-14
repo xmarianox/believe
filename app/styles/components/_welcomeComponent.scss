@@ -69,3 +69,56 @@
 		}
 	}
 }
+
+// =============================================================================
+// - steps
+// =============================================================================
+.steps {
+	display: none;
+
+	@media #{$breakpoint-tablet-port} {
+		@include size(100%, auto);
+		max-width: $secure-area;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	ul {
+		@include size(100%, auto);
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	li {
+		@include size(auto, 32px);
+		padding: 4px 17px;
+		overflow: hidden;
+		margin: auto;
+		border: 1px solid $lightBlue;
+		border-top: none;
+		border-right: none;
+
+		&:last-child {
+			border-right: 1px solid $lightBlue;
+		}
+	}
+
+	a {
+		font-family: $montserratBold;
+		@include font-size(16px);
+		@include line-height(16px);
+		text-decoration: none;
+		color: $darkGray;
+
+		display: block;
+	}
+}

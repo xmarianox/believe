@@ -63,40 +63,46 @@
 // =============================================================================
 // - Components for big screens.
 // =============================================================================
-@media #{$breakpoint-tablet-port} {
-	.navigation {
-		@include size(100%, auto);
-		max-width: $secure-area;
+.navigation {
+	@include size(100%, auto);
+	max-width: $secure-area;
+	margin: auto;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	li {
 		margin: auto;
 
-		ul {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-		}
-
-		li {
-			margin: auto;
-
-			&.active {
-				a {
-					color: $lightBlue;
-				}
-			}
-		}
-
-		a {
-			font-family: $montserratSemiBold;
-			@include font-size(14px);
-			@include line-height(24px);
-			text-decoration: none;
-			color: $darkGray;
-
-			&:hover {
+		&.active {
+			a {
 				color: $lightBlue;
 			}
 		}
 	}
+
+	a {
+		font-family: $montserratSemiBold;
+		@include font-size(12px);
+		@include line-height(24px);
+		text-decoration: none;
+		color: $darkGray;
+
+		&:hover {
+			color: $lightBlue;
+		}
+	}
+
+	@media #{$breakpoint-tablet-port} {}
+	@media #{$breakpoint-laptop-pc} {
+		a {
+			@include font-size(14px);
+		}
+	}
 }
+
