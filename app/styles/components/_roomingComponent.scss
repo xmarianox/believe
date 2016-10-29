@@ -1,7 +1,7 @@
 // =============================================================================
-// - WelcomeContainer
+// - RoomingContainer
 // =============================================================================
-.welcome {
+.rooming {
 	@include size(100%, auto);
 	padding: 8px 0;
 	color: $darkGray;
@@ -20,16 +20,6 @@
 		@include line-height(24px);
 		text-align: center;
 		margin-bottom: 30px;
-	}
-
-	figure {
-		@include size(100%, auto);
-		overflow: hidden;
-	}
-
-	img {
-		@include size(100%, auto);
-		display: block;
 	}
 
 	// =============================================================================
@@ -71,57 +61,80 @@
 }
 
 // =============================================================================
-// - steps
+// - ROOM LIST
 // =============================================================================
-.steps {
-	display: none;
+.room_list {
+	@include size(100%, auto);
+	overflow: hidden;
+}
 
-	@media #{$breakpoint-tablet-port} {
-		@include size(100%, auto);
-		max-width: $secure-area;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-	}
+.room_list_item {
+	@include size(100%, auto);
+	overflow: hidden;
+	margin-bottom: 30px;
 
-	ol {
-		@include size(100%, auto);
-		margin: auto;
-
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: center;
-		justify-content: center;
-	}
-
-	li {
-		@include size(auto, 32px);
-		padding: 4px 17px;
+	header {
+		text-align: center;
 		overflow: hidden;
-		margin: auto;
-		border: 1px solid $lightBlue;
-		border-top: none;
-		border-right: none;
+		padding: 20px 0;
 
-		&:last-child {
-			border-right: 1px solid $lightBlue;
+		h2 {
+			font-family: $montserratBold;
+			@include font-size(18px);
+			@include line-height(24px);
 		}
-	}
 
-	a {
-		font-family: $montserratBold;
-		@include font-size(16px);
-		@include line-height(16px);
-		text-decoration: none;
-		color: $darkGray;
-		display: block;
+		p {
+			font-family: $montserratBold;
+			@include font-size(18px);
+			@include line-height(24px);
+			margin-bottom: 0;
+		}
 
-		&.active {
-			color: $lightBlue;
+		hr {
+			@include size(100%, auto);
+			border: 0;
+			border-top: 1px solid $lightBlue;
+			margin: 20px 0px;
 		}
 	}
 }
+
+.gallery {
+	@include size(100%, auto);
+	overflow: hidden;
+	margin: 0 auto 16px;
+
+	figure {
+		@include size(100%, auto);
+		overflow: hidden;
+	}
+
+	img {
+		@include size(100%, auto);
+		display: block;
+	}
+}
+
+.slick-arrow {
+	@include size(22px, 43px);
+	border: none;
+	text-indent: 9999px;
+	// position
+	position: absolute;
+	top: 43%;
+	z-index: 2;
+
+	&.slick-prev {
+		background: url(../images/icons/ic_prev_white.svg) center center no-repeat;
+		background-size: cover;
+		left: 8px;
+	}
+	&.slick-next {
+		background: url(../images/icons/ic_next_white.svg) center center no-repeat;
+		background-size: cover;
+		right: 8px;
+	}
+}
+
+

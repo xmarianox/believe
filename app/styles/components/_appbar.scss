@@ -65,7 +65,6 @@
 // =============================================================================
 .navigation {
 	@include size(100%, auto);
-	max-width: $secure-area;
 	margin: auto;
 
 	ul {
@@ -99,10 +98,17 @@
 	}
 
 	@media #{$breakpoint-tablet-port} {}
+	@media #{$breakpoint-tablet-land} {}
+	@media #{$breakpoint-laptop-small} {
+		max-width: $secure-area-laptop;
+	}
 	@media #{$breakpoint-laptop-pc} {
 		a {
 			@include font-size(14px);
 		}
+	}
+	@media #{$breakpoint-laptop-big} {
+		max-width: $secure-area;
 	}
 }
 

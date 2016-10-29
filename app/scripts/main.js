@@ -13,4 +13,7 @@ $(document).ready(() => {
 		//$('menu').toggleClass('visible');
 	});
 
+
+	$('.gallery').slick();
+
 });

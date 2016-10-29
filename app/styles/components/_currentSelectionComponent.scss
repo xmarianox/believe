@@ -1,0 +1,51 @@
+// =============================================================================
+// - RoomingContainer
+// =============================================================================
+#current_selection {
+	@include size(100%, auto);
+	margin-top: 62px;
+	padding: 16px 8px;
+	background-color: $black;
+
+	// Form element
+	form {
+		margin: 0;
+
+		.form_control {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	input {
+		background-color: transparent;
+	}
+	.select_container {
+		background-color: transparent;
+		select {
+			background-color: transparent;
+		}
+	}
+
+	p {
+		font-family: $montserratRegular;
+		@include font-size(30px);
+		@include line-height(40px);
+		text-align: center;
+		color: $lightBlue;
+
+		em {
+			font-family: $montserratBold;
+		}
+	}
+
+	// =============================================================================
+	// - Responsive
+	// =============================================================================
+	@media #{$breakpoint-smartphone-big} {
+		padding: 16px;
+	}
+	@media #{$breakpoint-tablet-port} {}
+	@media #{$breakpoint-laptop-small} {}
+}
+

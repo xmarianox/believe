@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -54,6 +55,43 @@
       </button>
     </header><!-- appbar -->
 
+    <section id="current_selection">
+      <article>
+        <form>
+          <div class="form_control flex">
+            <div class="date_control">
+              <input type="date" name="desde" placeholder="CHECK IN">
+            </div>
+            <div class="date_divider">
+              <i class="ic ic_arrow_right"></i>
+            </div>
+            <div class="date_control">
+              <input type="date" name="hasta" placeholder="CHECK OUT">
+            </div>
+          </div>
+
+          <div class="form_control">
+            <div class="select_container">
+              <select>
+                <option>1 guest</option>
+                <option>2 guest</option>
+                <option>3 guest</option>
+                <option>4 guest</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form_control">
+            <p>TOTAL <em>$2226</em></p>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <!--
+      Cuando se esta en el paso 0 hay que agregar la clase
+      `welcomeActive` al .main-container
+     -->
     <main class="main-container">
 
       <section class="steps">
@@ -63,10 +101,11 @@
           <li><a href="" title="3. SURF, YOGA & BEYOND">3. SURF, YOGA & BEYOND</a></li>
           <li><a href="" title="4. TRANSPORTATION">4. TRANSPORTATION</a></li>
           <li><a href="" title="5. CONFIRM & SUBMIT">5. CONFIRM & SUBMIT</a></li>
-          <li><a href="" title="STEP 0 OF 5">STEP 0 OF 5</a></li>
+          <li><a href="" class="active" title="STEP 0 OF 5">STEP <span class="steps_active">0</span> OF 5</a></li>
         </ol>
       </section>
-
+      <!--
+      // PASO - 0
       <section class="welcome">
         <article class="welcome_container">
           <h1>WELCOME TO THE CUSTOMIZER</h1>
@@ -119,7 +158,134 @@
           </figure>
         </article>
       </section>
+      -->
 
+      <!--
+      // PASO - 1
+      -->
+      <section class="rooming">
+        <article class="rooming_container">
+          <button class="btn btn_primary">TIPS BEFORE CLICKING NEXT</button>
+
+          <h1>ROOMS FOR EVERYONE!</h1>
+          <p>You will be staying at the Funky Lodge, one of those places in town with a unique vibe. It offers great versatility in rooming, from a fully equipped high-end apartment to dorm rooms with couch beds, and all the amenities you may need.</p>
+
+          <ul class="room_list">
+            <li class="room_list_item">
+              <header>
+                <h2>DELUXE APARTMENT</h2>
+                <hr />
+                <p>$160 PER NIGHT / GUESTS</p>
+              </header>
+
+              <div class="gallery">
+                <figure>
+                  <img src="images/room1.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room2.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room3.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room4.jpg">
+                </figure>
+              </div>
+
+              <button class="btn btn_primary">SEE MORE</button>
+            </li><!-- Item -->
+
+            <li class="room_list_item">
+              <header>
+                <h2>SUNSET VIEW APARTMENT</h2>
+                <hr />
+                <p>$120 PER NIGHT / GUESTS</p>
+              </header>
+
+              <div class="gallery">
+                <figure>
+                  <img src="images/room2.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room3.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room4.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room1.jpg">
+                </figure>
+              </div>
+
+              <button class="btn btn_primary">SEE MORE</button>
+            </li><!-- Item -->
+
+            <li class="room_list_item">
+              <header>
+                <h2>PRIVATE BUNGALOW</h2>
+                <hr />
+                <p>$160 PER NIGHT / GUESTS</p>
+              </header>
+
+              <div class="gallery">
+                <figure>
+                  <img src="images/room3.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room4.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room1.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room2.jpg">
+                </figure>
+              </div>
+
+              <button class="btn btn_primary">SEE MORE</button>
+            </li><!-- Item -->
+
+            <li class="room_list_item">
+              <header>
+                <h2>DORM ROOM</h2>
+                <hr />
+                <p>$160 PER NIGHT / GUESTS</p>
+              </header>
+
+              <div class="gallery">
+                <figure>
+                  <img src="images/room4.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room1.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room2.jpg">
+                </figure>
+
+                <figure>
+                  <img src="images/room3.jpg">
+                </figure>
+              </div>
+
+              <button class="btn btn_primary">SEE MORE</button>
+            </li><!-- Item -->
+          </ul>
+
+        </article>
+      </section>
 
     </main>
 
@@ -137,6 +303,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

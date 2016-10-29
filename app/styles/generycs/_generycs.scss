@@ -27,8 +27,11 @@ body {
 
 .main-container {
   @include size(100%, auto);
-  margin-top: 62px;
   padding: 16px 8px;
+
+  &.welcomeActive {
+    margin-top: 62px;
+  }
 
   // - Responsive
   @media #{$breakpoint-smartphone-big} {
