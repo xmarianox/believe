@@ -16,6 +16,19 @@
 		@include size(27px, 20px);
 	}
 
+	//
+	&_arrow_navigation_back {
+		background: url(../images/icons/left_arrow_white.svg) center center no-repeat;
+		background-size: cover;
+		@include size(37px, 26px);
+	}
+
+	&_arrow_navigation_next {
+		background: url(../images/icons/right_arrow_white.svg) center center no-repeat;
+		background-size: cover;
+		@include size(37px, 26px);
+	}
+
 	// Social
 	&_twitter {
 		background: url(../images/icons/social/ic_twitter.svg) center center no-repeat;

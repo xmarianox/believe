@@ -27,8 +27,43 @@
     border: 1px solid $lightBlue;
     // texts
     font-family: $montserratBold;
-    @include font-size(24px);
+    @include font-size(20px);
     @include line-height(44px);
+  }
+
+  &_default {
+    @include size(100%, 44px);
+    // texts
+    font-family: $montserratBold;
+    @include font-size(20px);
+    @include line-height(44px);
+    color: $lightBlue2;
+  }
+
+  &_navigation {
+    @include size(calc(50% - 10px), 44px);
+    background-color: $lightBlue;
+    border: 1px solid $lightBlue;
+    // texts
+    font-family: $montserratBold;
+    @include font-size(20px);
+    @include line-height(44px);
+
+    &.back {
+      text-align: right;
+    }
+    &.next {
+      text-align: left;
+    }
+  }
+
+  @media #{$breakpoint-smartphone-big-landscape} {
+    &_primary {
+      @include font-size(24px);
+    }
+    &_default {
+      @include font-size(24px);
+    }
   }
 
 }

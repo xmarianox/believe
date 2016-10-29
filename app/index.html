@@ -165,7 +165,7 @@
       -->
       <section class="rooming">
         <article class="rooming_container">
-          <button class="btn btn_primary">TIPS BEFORE CLICKING NEXT</button>
+          <button class="btn btn_primary" id="btn_tips">TIPS BEFORE CLICKING NEXT</button>
 
           <h1>ROOMS FOR EVERYONE!</h1>
           <p>You will be staying at the Funky Lodge, one of those places in town with a unique vibe. It offers great versatility in rooming, from a fully equipped high-end apartment to dorm rooms with couch beds, and all the amenities you may need.</p>
@@ -282,8 +282,26 @@
 
               <button class="btn btn_primary">SEE MORE</button>
             </li><!-- Item -->
+
+            <!-- Button para cargar mas items -->
+            <li>
+              <button class="btn btn_default">+ $1440</button>
+            </li>
           </ul>
 
+          <div class="comments">
+            <h3>PLEASE, LEAVE YOUR COMMENTS</h3>
+            <textarea name="comments_box" id="comments_box" placeholder="Write your comment here."></textarea>
+
+            <div class="flex-navigation">
+              <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+              <button class="btn btn_navigation next"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
+            </div>
+          </div>
+
+          <div class="error_message">
+            <p>Please, choose an option for marked buttons in red</p>
+          </div>
         </article>
       </section>
 
