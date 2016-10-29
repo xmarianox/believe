@@ -1,7 +1,7 @@
 // =============================================================================
 // - RoomingContainer
 // =============================================================================
-.rooming {
+.meals {
 	@include size(100%, auto);
 	padding: 8px 0;
 	color: $darkGray;
@@ -29,7 +29,7 @@
 		margin-bottom: 30px;
 	}
 
-	#btn_tips {
+	#btn_tips_meals {
 		margin-bottom: 25px;
 	}
 
@@ -74,17 +74,18 @@
 // =============================================================================
 // - ROOM LIST
 // =============================================================================
-.room_list {
+.meal_list {
 	@include size(100%, auto);
 	border-bottom: 1px solid $lightGray2;
 	overflow: hidden;
 	padding-bottom: 20px;
 }
 
-.room_list_item {
+.meal_list_item {
 	@include size(100%, auto);
 	overflow: hidden;
 	margin-bottom: 30px;
+	position: relative;
 
 	header {
 		text-align: center;
@@ -111,41 +112,72 @@
 			margin: 20px 0px;
 		}
 	}
+
+	.btn {
+		margin-bottom: 16px;
+	}
 }
 
-.gallery {
+.amount_information {
 	@include size(100%, auto);
 	overflow: hidden;
-	margin: 0 auto 16px;
+	text-align: center;
 
-	figure {
-		@include size(100%, auto);
-		overflow: hidden;
-	}
-
-	img {
-		@include size(100%, auto);
-		display: block;
+	p {
+		font-family: $montserratBold;
+	    @include font-size(20px);
+	    @include line-height(44px);
+	    color: $lightBlue2;
+	    margin-bottom: 0;
 	}
 }
 
-.slick-arrow {
-	@include size(22px, 43px);
-	border: none;
-	text-indent: 9999px;
+.services_icon {
+	@include size(75px, 75px);
+	display: block;
+	margin: 0 auto 30px;
+}
+
+
+// =============================================================================
+// - Modals
+// =============================================================================
+.modal {
+	@include size(100%, auto);
+	background-color: $white;
+	border: 1px solid $lightGray2;
+	padding: 16px;
+	overflow: hidden;
 	// position
 	position: absolute;
-	top: 43%;
+	top: 160px;
+	right: 0;
+	left: 0;
 	z-index: 2;
 
-	&.slick-prev {
-		background: url(../images/icons/ic_prev_white.svg) center center no-repeat;
-		background-size: cover;
-		left: 8px;
+	.btn_close_modal {
+		position: absolute;
+		z-index: 3;
+		top: 16px;
+		right: 16px;
 	}
-	&.slick-next {
-		background: url(../images/icons/ic_next_white.svg) center center no-repeat;
-		background-size: cover;
-		right: 8px;
+
+	h4 {
+		font-family: $montserratBold;
+		@include font-size(14px);
+    	@include line-height(30px);
+    	color: $lightBlue;
+    	margin-bottom: 10px;
+	}
+
+	ul {
+		@include size(100%, auto);
+		list-style-type: disc;
+		padding-left: 26px;
+
+		li {
+			@include font-size(14px);
+	    	@include line-height(20px);
+		}
 	}
 }

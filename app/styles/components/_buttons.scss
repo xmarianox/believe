@@ -57,6 +57,12 @@
     }
   }
 
+  &_close_modal {
+    background: url(../images/icons/ic_close_light_blue.svg) center center no-repeat;
+    @include size(30px, 30px);
+    padding: 0;
+  }
+
   @media #{$breakpoint-smartphone-big-landscape} {
     &_primary {
       @include font-size(24px);
