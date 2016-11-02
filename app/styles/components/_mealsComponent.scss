@@ -3,7 +3,10 @@
 // - Surf&YogaContainer
 // - TransportationContainer
 // =============================================================================
-.meals, .surf_yoga, .transportation {
+.meals,
+.surf_yoga,
+.transportation,
+.resume {
 	@include size(100%, auto);
 	padding: 8px 0;
 	color: $darkGray;
@@ -33,7 +36,8 @@
 
 	#btn_tips_meals,
 	#btn_tips_surf_yoga,
-	#btn_tips_transportation {
+	#btn_tips_transportation,
+	#btn_tips_resume {
 		margin-bottom: 25px;
 	}
 
@@ -188,11 +192,13 @@
 		justify-content: center;
 
 		.services_icon {
-			margin: auto 30px auto auto;
+			margin: auto;
+			margin-right: 30px;
 		}
 
 		h2 {
-			margin: auto auto auto 0;
+			margin: auto;
+			margin-left: 0px;
 		}
 
 		span {
@@ -203,6 +209,121 @@
 
 		.ic_transfer {
 			margin: auto 12px;
+		}
+	}
+}
+
+
+// =============================================================================
+// - RESUME
+// =============================================================================
+.resume_item {
+	@include size(100%, auto);
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		font-family: $montserratBold;
+		@include font-size(18px);
+		@include line-height(24px);
+		margin-bottom: 5px;
+	}
+
+	ul {
+		@include size(100%, auto);
+		border-top: 1px solid $lightBlue3;
+		padding: 8px 0;
+		margin-bottom: 24px;
+
+		li {
+			@include size(100%, 40px);
+			// flex
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+
+			// texts
+			font-family: $montserratRegular;
+			@include font-size(14px);
+			@include line-height(24px);
+
+			p {
+				@include font-size(14px);
+				margin: auto;
+				margin-left: 0px;
+			}
+
+			span {
+				@include font-size(16px);
+				margin: auto;
+				margin-right: 0px;
+			}
+		}
+	}
+}
+
+.resume_total_item {
+	@include size(100%, auto);
+	overflow: hidden;
+
+	ul {
+		@include size(100%, auto);
+		padding: 8px 0;
+		margin-bottom: 24px;
+
+		li {
+			@include size(100%, 45px);
+			// flex
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+
+			// texts
+			font-family: $montserratRegular;
+			@include font-size(14px);
+			@include line-height(24px);
+
+			&.divider {
+				@include size(100%, auto);
+				border-top: 1px solid $lightGray3;
+			}
+
+			p {
+				@include font-size(16px);
+				margin: auto;
+				margin-left: 0px;
+
+				em {
+					font-family: $montserratBold;
+				}
+			}
+
+			span {
+				@include font-size(16px);
+				margin: auto;
+				margin-right: 0px;
+
+				em {
+					font-family: $montserratBold;
+				}
+			}
+		}
+	}
+
+	.align_left {
+		text-align: left;
+
+		a {
+			font-family: $montserratBold;
+			color: $lightBlue;
+			text-decoration: none;
 		}
 	}
 }
