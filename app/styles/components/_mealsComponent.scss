@@ -98,6 +98,16 @@
 			@include line-height(24px);
 		}
 
+		.open_modal {
+			font-family: $montserratBold;
+			@include font-size(18px);
+			@include line-height(44px);
+			text-decoration: none;
+			color: $lightBlue;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
 		p {
 			font-family: $montserratBold;
 			@include font-size(18px);
@@ -118,6 +128,15 @@
 	}
 }
 
+.triangle {
+  @include size(0, 0);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $lightBlue;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .amount_information {
 	@include size(100%, auto);
 	overflow: hidden;
@@ -135,9 +154,8 @@
 .services_icon {
 	@include size(75px, 75px);
 	display: block;
-	margin: 0 auto 30px;
+	margin: 0 auto 20px;
 }
-
 
 // =============================================================================
 // - Modals
@@ -148,12 +166,18 @@
 	border: 1px solid $lightGray2;
 	padding: 16px;
 	overflow: hidden;
+	display: none;
 	// position
 	position: absolute;
-	top: 160px;
+	top: 150px;
 	right: 0;
 	left: 0;
 	z-index: 2;
+
+	&.visible {
+		display: block;
+		@include fade-in(200ms);
+	}
 
 	.btn_close_modal {
 		position: absolute;
