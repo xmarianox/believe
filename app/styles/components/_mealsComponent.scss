@@ -1,7 +1,8 @@
 // =============================================================================
-// - RoomingContainer
+// - MealsContainer
+// - Surf&YogaContainer
 // =============================================================================
-.meals {
+.meals, .surf_yoga {
 	@include size(100%, auto);
 	padding: 8px 0;
 	color: $darkGray;
@@ -29,7 +30,8 @@
 		margin-bottom: 30px;
 	}
 
-	#btn_tips_meals {
+	#btn_tips_meals,
+	#btn_tips_surf_yoga {
 		margin-bottom: 25px;
 	}
 
@@ -72,16 +74,17 @@
 }
 
 // =============================================================================
-// - ROOM LIST
+// - MEAL LIST
+// - SURF & YOGA
 // =============================================================================
-.meal_list {
+.meal_list, .surf_yoga_list {
 	@include size(100%, auto);
 	border-bottom: 1px solid $lightGray2;
 	overflow: hidden;
 	padding-bottom: 20px;
 }
 
-.meal_list_item {
+.meal_list_item, .surf_yoga_list_item {
 	@include size(100%, auto);
 	overflow: hidden;
 	margin-bottom: 30px;
