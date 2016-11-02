@@ -29,6 +29,12 @@
 		@include size(37px, 26px);
 	}
 
+	&_transfer {
+		background: url(../images/icons/ic_transfer.svg) center center no-repeat;
+		background-size: cover;
+		@include size(19px, 15px);
+	}
+
 	// Social
 	&_twitter {
 		background: url(../images/icons/social/ic_twitter.svg) center center no-repeat;

@@ -1,8 +1,9 @@
 // =============================================================================
 // - MealsContainer
 // - Surf&YogaContainer
+// - TransportationContainer
 // =============================================================================
-.meals, .surf_yoga {
+.meals, .surf_yoga, .transportation {
 	@include size(100%, auto);
 	padding: 8px 0;
 	color: $darkGray;
@@ -31,7 +32,8 @@
 	}
 
 	#btn_tips_meals,
-	#btn_tips_surf_yoga {
+	#btn_tips_surf_yoga,
+	#btn_tips_transportation {
 		margin-bottom: 25px;
 	}
 
@@ -76,15 +78,20 @@
 // =============================================================================
 // - MEAL LIST
 // - SURF & YOGA
+// - TRANSPORTATION
 // =============================================================================
-.meal_list, .surf_yoga_list {
+.meal_list,
+.surf_yoga_list,
+.transportation_list {
 	@include size(100%, auto);
 	border-bottom: 1px solid $lightGray2;
 	overflow: hidden;
 	padding-bottom: 20px;
 }
 
-.meal_list_item, .surf_yoga_list_item {
+.meal_list_item,
+.surf_yoga_list_item,
+.transportation_list_item {
 	@include size(100%, auto);
 	overflow: hidden;
 	margin-bottom: 30px;
@@ -158,6 +165,46 @@
 	@include size(75px, 75px);
 	display: block;
 	margin: 0 auto 20px;
+}
+
+// =============================================================================
+// - TRANSPORTATION
+// =============================================================================
+.transportation_list_item {
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.header_flex_item {
+		@include size(100%, auto);
+		padding: 5px 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+
+		.services_icon {
+			margin: auto 30px auto auto;
+		}
+
+		h2 {
+			margin: auto auto auto 0;
+		}
+
+		span {
+			font-family: $montserratBold;
+			@include font-size(15px);
+			@include line-height(19px);
+		}
+
+		.ic_transfer {
+			margin: auto 12px;
+		}
+	}
 }
 
 // =============================================================================

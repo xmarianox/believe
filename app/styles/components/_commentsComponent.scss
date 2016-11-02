@@ -13,6 +13,7 @@
 		padding: 8px;
 		border: 1px solid $lightGray3;
 		margin-bottom: 20px;
+		@include border-radius(0px);
 		// texts
 		font-family: $montserratRegular;
 		@include font-size(18px);
