@@ -66,7 +66,7 @@
 
 	@media #{$breakpoint-laptop-small} {
 		&_container {
-			padding: 0 65px;
+			padding: 0px;
 		}
 	}
 }
@@ -76,9 +76,13 @@
 // =============================================================================
 .room_list {
 	@include size(100%, auto);
-	border-bottom: 1px solid $lightGray2;
+	border-bottom: 1px dashed $lightGray2;
 	overflow: hidden;
 	padding-bottom: 20px;
+
+	@media #{$breakpoint-laptop-small} {
+		overflow: visible;
+	}
 }
 
 .room_list_item {
@@ -104,11 +108,45 @@
 			margin-bottom: 0;
 		}
 
+		.open_modal {
+			display: none;
+		}
+
 		hr {
 			@include size(100%, auto);
 			border: 0;
 			border-top: 1px solid $lightBlue;
 			margin: 20px 0px;
+		}
+	}
+
+	@media #{$breakpoint-laptop-small} {
+		@include size(235px, auto);
+		margin: 0 10px;
+
+		header {
+			h2 {
+				@include font-size(16px);
+				margin-bottom: 8px;
+			}
+
+			p {
+				@include font-size(16px);
+			}
+
+			.open_modal {
+				font-family: $montserratBold;
+				@include font-size(13px);
+				@include line-height(17px);
+				text-decoration: none;
+				color: $lightBlue;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.amount_information {
+			padding: 16px 0px;
 		}
 	}
 }
@@ -127,25 +165,41 @@
 		@include size(100%, auto);
 		display: block;
 	}
+
+	.slick-arrow {
+		@include size(22px, 43px);
+		top: 43%;
+
+		&.slick-prev {
+			background: url(../images/icons/ic_prev_white.svg) center center no-repeat;
+			background-size: cover;
+			left: 8px;
+		}
+		&.slick-next {
+			background: url(../images/icons/ic_next_white.svg) center center no-repeat;
+			background-size: cover;
+			right: 8px;
+		}
+	}
 }
 
 .slick-arrow {
-	@include size(22px, 43px);
+	@include size(28px, 54px);
 	border: none;
 	text-indent: 9999px;
 	// position
 	position: absolute;
-	top: 43%;
+	top: 45%;
 	z-index: 2;
 
 	&.slick-prev {
-		background: url(../images/icons/ic_prev_white.svg) center center no-repeat;
+		background: url(../images/icons/ic_prev.svg) center center no-repeat;
 		background-size: cover;
-		left: 8px;
+		left: -42px;
 	}
 	&.slick-next {
-		background: url(../images/icons/ic_next_white.svg) center center no-repeat;
+		background: url(../images/icons/ic_next.svg) center center no-repeat;
 		background-size: cover;
-		right: 8px;
+		right: -42px;
 	}
 }

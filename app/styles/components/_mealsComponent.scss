@@ -149,6 +149,12 @@
   border-top: 10px solid $lightBlue;
   display: inline-block;
   margin-left: 10px;
+
+  @media #{$breakpoint-laptop-small} {
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 9px solid $lightBlue;
+  }
 }
 
 .amount_information {

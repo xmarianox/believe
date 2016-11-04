@@ -13,8 +13,17 @@ $(document).ready(() => {
 		//$('menu').toggleClass('visible');
 	});
 
-
 	$('.gallery').slick();
+
+	if (window.innerWidth > 1000) {
+
+		$('.room_list').slick({
+			infinite: false,
+  			slidesToShow: 4,
+  			slidesToScroll: 4
+		});
+	}
+
 
 
 	$('.open_modal').click(event => {
