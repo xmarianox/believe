@@ -47,6 +47,34 @@
 			}
 		}
 	}
+
+	@media #{$breakpoint-smartphone-big-landscape} {
+		// flex
+		display: flex;
+		flex-orientation: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		h3 {
+			@include size(100%, auto);
+		}
+
+		textarea {
+			@include size(100%, 50px);
+			max-width: 600px;
+			min-height: 50px;
+			margin: auto;
+			margin-left: 0px;
+			margin-bottom: 0px;
+		}
+
+		.flex-navigation {
+			max-width: 416px;
+			margin: auto;
+			margin-right: 0px;
+		}
+	}
 }
 
 // =============================================================================

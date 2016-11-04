@@ -91,6 +91,26 @@
     }
   }
 
+  @media #{$breakpoint-laptop-small} {
+    &_primary {
+      height: 50px;
+      @include line-height(50px);
+      &:hover {
+        background-color: $lightBlue2;
+        border: 1px solid $lightBlue2;
+      }
+    }
+
+    &_navigation {
+      height: 50px;
+      @include line-height(50px);
+      &:hover {
+        background-color: $lightBlue2;
+        border: 1px solid $lightBlue2;
+      }
+    }
+  }
+
 }
 
 // =============================================================================
