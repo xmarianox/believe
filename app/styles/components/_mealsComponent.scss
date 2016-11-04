@@ -270,6 +270,7 @@
 .resume_total_item {
 	@include size(100%, auto);
 	overflow: hidden;
+	border-bottom: 1px solid $lightGray2;
 
 	ul {
 		@include size(100%, auto);
@@ -315,6 +316,10 @@
 				}
 			}
 		}
+	}
+
+	input {
+		text-align: left;
 	}
 
 	.align_left {
