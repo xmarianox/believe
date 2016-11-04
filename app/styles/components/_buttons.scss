@@ -55,11 +55,24 @@
     @include font-size(20px);
     @include line-height(44px);
 
+    .ic {
+      margin: auto;
+    }
+
+    span {
+      margin: auto;
+    }
+
     &.back {
       text-align: right;
+
+      .ic {
+        margin-left: 0px;
+      }
     }
     &.next {
       text-align: left;
+      margin-right: 0px;
     }
   }
 
