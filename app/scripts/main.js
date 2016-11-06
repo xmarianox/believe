@@ -1,6 +1,24 @@
 /* jshint smarttabs:true */
 /* global $ */
 
+const setSlick = () => {
+	'use strict';
+
+	if (window.innerWidth >= 900) {
+		$('.room_list').slick({
+			infinite: false,
+  			slidesToShow: 3,
+  			slidesToScroll: 3
+		});
+	} else if (window.innerWidth >= 1050) {
+		$('.room_list').slick({
+			infinite: false,
+  			slidesToShow: 4,
+  			slidesToScroll: 4
+		});
+	}
+}
+
 $(document).ready(() => {
 	'use strict';
 
@@ -15,16 +33,12 @@ $(document).ready(() => {
 
 	$('.gallery').slick();
 
-	if (window.innerWidth > 1000) {
-
-		$('.room_list').slick({
-			infinite: false,
-  			slidesToShow: 4,
-  			slidesToScroll: 4
-		});
+	if ($('.rooming').is(':visible')) {
+		// set initial slick
+		setSlick();
+		// on resize listener
+		$(window).resize(setSlick);
 	}
-
-
 
 	$('.open_modal').click(event => {
 		event.preventDefault();

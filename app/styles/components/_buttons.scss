@@ -91,7 +91,7 @@
     }
   }
 
-  @media #{$breakpoint-laptop-small} {
+  @media #{$breakpoint-tablet-land} {
     &_primary {
       height: 50px;
       @include line-height(50px);

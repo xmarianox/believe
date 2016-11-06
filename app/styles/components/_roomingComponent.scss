@@ -64,6 +64,20 @@
 		}
 	}
 
+	@media #{$breakpoint-tablet-land} {
+		&_container {
+			padding-top: 0px;
+		}
+		h1 {
+			@include font-size(26px);
+			@include line-height(48px);
+		}
+		p {
+			@include font-size(14px);
+			@include line-height(19px);
+		}
+	}
+
 	@media #{$breakpoint-laptop-small} {
 		&_container {
 			padding: 0px;
@@ -80,7 +94,7 @@
 	overflow: hidden;
 	padding-bottom: 20px;
 
-	@media #{$breakpoint-laptop-small} {
+	@media #{$breakpoint-tablet-port} {
 		overflow: visible;
 	}
 }
@@ -120,9 +134,12 @@
 		}
 	}
 
+	@media #{$breakpoint-tablet-port} {
+		margin: 0 10px;
+	}
+
 	@media #{$breakpoint-laptop-small} {
 		@include size(235px, auto);
-		margin: 0 10px;
 
 		header {
 			h2 {
@@ -195,11 +212,20 @@
 	&.slick-prev {
 		background: url(../images/icons/ic_prev.svg) center center no-repeat;
 		background-size: cover;
-		left: -42px;
+		left: -24px;
 	}
 	&.slick-next {
 		background: url(../images/icons/ic_next.svg) center center no-repeat;
 		background-size: cover;
-		right: -42px;
+		right: -24px;
+	}
+
+	@media #{$breakpoint-laptop-small} {
+		&.slick-prev {
+			left: -42px;
+		}
+		&.slick-next {
+			right: -42px;
+		}
 	}
 }

@@ -39,7 +39,6 @@ body {
   }
 }
 
-
 .visible {
   &_mobile {
     display: block;
@@ -48,7 +47,7 @@ body {
     display: none;
   }
 
-  @media #{$breakpoint-tablet-port} {
+  @media #{$breakpoint-tablet-land} {
     &_mobile {
       display: none;
     }

@@ -48,21 +48,20 @@
 		}
 	}
 
-	@media #{$breakpoint-smartphone-big-landscape} {
-		// flex
-		display: flex;
-		flex-orientation: row;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-
-		h3 {
+	@media #{$breakpoint-tablet-land} {
+		.comments_flex_container {
 			@include size(100%, auto);
+			// flex
+			display: flex;
+			flex-orientation: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
 		}
 
 		textarea {
 			@include size(100%, 50px);
-			max-width: 600px;
+			max-width: 580px;
 			min-height: 50px;
 			margin: auto;
 			margin-left: 0px;
@@ -70,15 +69,23 @@
 		}
 
 		.flex-navigation {
-			max-width: 416px;
+			max-width: 350px;
 			margin: auto;
 			margin-right: 0px;
+		}
+	}
+
+	@media #{$breakpoint-laptop-small} {
+		textarea {
+			max-width: 600px;
+		}
+		.flex-navigation {
+			max-width: 416px;
 		}
 	}
 }
 
 // =============================================================================
-// - Errors
 // =============================================================================
 .error_message {
 	@include size(100%, auto);

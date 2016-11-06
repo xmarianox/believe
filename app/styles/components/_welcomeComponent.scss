@@ -76,7 +76,7 @@
 .steps {
 	display: none;
 
-	@media #{$breakpoint-tablet-port} {
+	@media #{$breakpoint-tablet-land} {
 		@include size(100%, auto);
 		max-width: $secure-area;
 		margin: 0 auto;
@@ -100,7 +100,7 @@
 
 	li {
 		@include size(auto, 32px);
-		padding: 4px 17px;
+		padding: 4px 22px;
 		overflow: hidden;
 		margin: auto;
 		border: 1px solid $lightBlue;
@@ -114,7 +114,7 @@
 
 	a {
 		font-family: $montserratBold;
-		@include font-size(16px);
+		@include font-size(14px);
 		@include line-height(16px);
 		text-decoration: none;
 		color: $darkGray;
@@ -122,6 +122,17 @@
 
 		&.active {
 			color: $lightBlue;
+		}
+	}
+
+
+	@media #{$breakpoint-laptop-small} {
+		li {
+			padding: 4px 17px;
+		}
+
+		a {
+			@include font-size(16px);
 		}
 	}
 }

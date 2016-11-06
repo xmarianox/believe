@@ -46,6 +46,14 @@
 		padding: 16px;
 	}
 	@media #{$breakpoint-tablet-port} {}
+	@media #{$breakpoint-tablet-land} {
+		form {
+			padding: 0px;
+		}
+		.form_control {
+			margin-bottom: 0px;
+		}
+	}
 	@media #{$breakpoint-laptop-small} {}
 }
 
