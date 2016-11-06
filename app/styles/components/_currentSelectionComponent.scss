@@ -5,7 +5,7 @@
 	@include size(100%, auto);
 	margin-top: 62px;
 	padding: 16px 8px;
-	background-color: $black;
+	background-color: $ultraDarkGray;
 
 	// Form element
 	form {
@@ -17,11 +17,13 @@
 			}
 		}
 	}
+
 	input {
-		background-color: transparent;
+		background-color: $black;
 	}
+
 	.select_container {
-		background-color: transparent;
+		background-color: $black;
 		select {
 			background-color: transparent;
 		}

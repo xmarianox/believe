@@ -25,6 +25,20 @@ input {
 	@include border-radius(0px);
 	background-color: $white;
 	padding: 0 8px;
+	position: relative;
+
+	&:after {
+		content: '';
+		@include size(0, 0);
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-top: 9px solid $gray;
+		display: inline-block;
+		// postion
+		position: absolute;
+		top: 18px;
+		right: 5px;
+	}
 
 	select {
 		@include size(100%, 100%);
@@ -78,8 +92,22 @@ form {
 	@media #{$breakpoint-tablet-port} {
 		margin: 0 10px 19px;
 	}
+
+	@media #{$breakpoint-tablet-land} {
+		&.select_control {
+			max-width: 130px;
+		}
+	}
+}
+
+.date_divider {
+	margin: auto 8px;
 }
 
 .date_control {
 	@include size(45%, auto);
+
+	@media #{$breakpoint-tablet-land} {
+		@include size(246px, auto);
+	}
 }

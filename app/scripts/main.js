@@ -19,8 +19,36 @@ const setSlick = () => {
 	}
 }
 
+
+const initApp = () => {
+	'use strict';
+
+	// steps views
+	let step0 = $('.welcome');
+	let step1 = $('.rooming');
+	let step2 = $('.meals');
+	let step3 = $('.surf_yoga');
+	let step4 = $('.transportation');
+	let step5 = $('.resume');
+	//let currentSelectionBar = $('#current_selection');
+
+	// set initial state;
+	step0.show();
+
+	//currentSelectionBar.hide();
+	step1.hide();
+	step2.hide();
+	step3.hide();
+	step4.hide();
+	step5.hide();
+}
+
+
+
 $(document).ready(() => {
 	'use strict';
+
+	initApp();
 
 	/**
 	*  Menu
