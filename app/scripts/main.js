@@ -27,11 +27,13 @@ const navigation = (type, prevView, nextView, position) => {
 		prevView.show();
 		$('.steps li').removeClass('active');
 		$(position).addClass('active');
+		$('html,body').scrollTop(0);
 	} else {
 		prevView.hide();
 		nextView.show();
 		$('.steps li').removeClass('active');
 		$(position).addClass('active');
+		$('html,body').scrollTop(0);
 	}
 };
 
