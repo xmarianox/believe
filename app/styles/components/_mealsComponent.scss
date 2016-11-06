@@ -95,9 +95,10 @@
 	@media #{$breakpoint-tablet-land} {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+		padding-bottom: 60px;
 	}
 }
 
@@ -155,10 +156,20 @@
 		margin: auto;
 
 		header {
-			p {
+			h2 {
 				@include font-size(16px);
 			}
+			p {
+				@include font-size(15px);
+				min-height: 48px;
+			}
 		}
+	}
+}
+
+.surf_yoga_list_item {
+	@media #{$breakpoint-tablet-land} {
+		margin: 0 30px 30px;
 	}
 }
 
@@ -239,6 +250,20 @@
 
 		.ic_transfer {
 			margin: auto 12px;
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		max-width: 260px;
+
+		.header_flex_item {
+			span {
+				@include font-size(14px);
+			}
+
+			.ic_transfer {
+				margin: auto 6px;
+			}
 		}
 	}
 }

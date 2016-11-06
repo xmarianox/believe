@@ -95,7 +95,6 @@ const initApp = () => {
 		event.preventDefault();
 		roomingView(step0, step1, step2, stepsList);
 	});
-
 };
 
 $(document).ready(() => {
@@ -103,7 +102,12 @@ $(document).ready(() => {
 
 	isMobile = new MobileDetect(window.navigator.userAgent);
 
-	initApp();
+	//initApp();
+
+	if ($('.rooming').is(':visible')) {
+		$('.gallery').slick();
+		setSlick('.room_list');
+	}
 
 	/**
 	*  Menu
