@@ -104,10 +104,9 @@
           <li><a href="" title="3. SURF, YOGA & BEYOND">3. SURF, YOGA & BEYOND</a></li>
           <li><a href="" title="4. TRANSPORTATION">4. TRANSPORTATION</a></li>
           <li><a href="" title="5. CONFIRM & SUBMIT">5. CONFIRM & SUBMIT</a></li>
-          <li><a href="" class="active" title="STEP 0 OF 5">STEP <span class="steps_active">0</span> OF 5</a></li>
+          <li class="active"><a href="" title="STEP 0 OF 5">STEP <span class="steps_active">0</span> OF 5</a></li>
         </ol>
       </section>
-
 
       <!--
       // PASO - 0 - Welcome
@@ -130,7 +129,7 @@
             <p>PLEASE INPUT YOUR IDEAL CHECK IN AND CHECK OUT DATES ABOVE AND START CUSTOMIZING YOUR TRIP IN 5 EASY STEPS</p>
           </div>
 
-          <form>
+          <form id="form_start_calculator">
             <div class="form_control flex">
               <div class="date_control">
                 <input type="date" name="desde" placeholder="CHECK IN">
@@ -155,7 +154,7 @@
             </div>
 
             <div class="form_control">
-              <button class="btn btn_primary">START</button>
+              <button class="btn btn_primary" id="#btn_start">START</button>
             </div>
           </form>
 

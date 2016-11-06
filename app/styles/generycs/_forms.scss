@@ -1,9 +1,6 @@
 // =============================================================================
 // - forms elements
 // =============================================================================
-// reset placeHolder color
-@include placeholder($gray);
-
 input {
 	@include size(100%, 44px);
 	border: 1px solid $gray;
@@ -81,6 +78,9 @@ form {
 	@include size(100%, auto);
 	margin: 0 auto 19px;
 
+	// reset placeHolder color
+	@include placeholder($gray);
+
 	&.flex {
 		display: flex;
 		flex-direction: row;
@@ -97,11 +97,18 @@ form {
 		&.select_control {
 			max-width: 130px;
 		}
+
+		.btn_primary {
+			height: 44px;
+			@include line-height(44px);
+		}
 	}
 }
 
 .date_divider {
-	margin: auto 8px;
+	@media #{$breakpoint-tablet-land} {
+		margin: auto 8px;
+	}
 }
 
 .date_control {

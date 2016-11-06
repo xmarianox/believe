@@ -110,6 +110,12 @@
 		&:last-child {
 			border-right: 1px solid $lightBlue;
 		}
+
+		&.active {
+			a {
+				color: $lightBlue;
+			}
+		}
 	}
 
 	a {
@@ -119,10 +125,6 @@
 		text-decoration: none;
 		color: $darkGray;
 		display: block;
-
-		&.active {
-			color: $lightBlue;
-		}
 	}
 
 
