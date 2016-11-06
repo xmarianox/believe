@@ -94,7 +94,15 @@
 	overflow: hidden;
 	padding-bottom: 20px;
 
-	@media #{$breakpoint-tablet-port} {
+	@media #{$breakpoint-only-tablet-port} {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	@media #{$breakpoint-tablet-land} {
 		overflow: visible;
 	}
 }
@@ -135,22 +143,15 @@
 	}
 
 	@media #{$breakpoint-tablet-port} {
-		margin: 0 10px;
-	}
-
-	@media #{$breakpoint-laptop-small} {
 		@include size(235px, auto);
+		margin: auto;
+		margin-bottom: 30px;
 
 		header {
 			h2 {
 				@include font-size(16px);
 				margin-bottom: 8px;
 			}
-
-			p {
-				@include font-size(16px);
-			}
-
 			.open_modal {
 				font-family: $montserratBold;
 				@include font-size(13px);
@@ -160,8 +161,18 @@
 				display: inline-block;
 				vertical-align: middle;
 			}
-		}
 
+			p {
+				@include font-size(16px);
+			}
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		margin: auto 10px;
+	}
+
+	@media #{$breakpoint-laptop-small} {
 		.amount_information {
 			padding: 16px 0px;
 		}
@@ -196,6 +207,12 @@
 			background: url(../images/icons/ic_next_white.svg) center center no-repeat;
 			background-size: cover;
 			right: 8px;
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		img {
+			max-width: 300px;
 		}
 	}
 }

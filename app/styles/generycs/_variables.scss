@@ -70,7 +70,9 @@ $breakpoint-laptop-pc: '(min-width: 85em)';
 $breakpoint-laptop-small: '(min-width: 70.000em)';
 // tablet
 $breakpoint-tablet-land:'(min-width: 63.938em)';
+$breakpoint-only-tablet-port: 'only screen and (min-width: 47em) and (max-width: 63em)';
 $breakpoint-tablet-port:'(min-width: 47em)';
+
 // smartphone landscape
 $breakpoint-smartphone-big-landscape: 'only screen and (min-width: 40em)';
 $breakpoint-smartphone-medium-landscape: 'only screen and (min-device-width: 41.688em)';

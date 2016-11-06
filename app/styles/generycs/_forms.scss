@@ -65,7 +65,7 @@ form {
 	overflow: hidden;
 	margin: 0 auto 20px;
 
-    @media #{$breakpoint-tablet-port} {
+    @media #{$breakpoint-tablet-land} {
 		padding: 0 36px;
 		display: flex;
 		flex-direction: row;
@@ -89,11 +89,8 @@ form {
 		justify-content: space-between;
 	}
 
-	@media #{$breakpoint-tablet-port} {
-		margin: 0 10px 19px;
-	}
-
 	@media #{$breakpoint-tablet-land} {
+		margin: 0 10px 19px;
 		&.select_control {
 			max-width: 130px;
 		}

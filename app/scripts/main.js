@@ -1,21 +1,27 @@
 /* jshint smarttabs:true */
-/* global $ */
+/* global $, MobileDetect */
 
-const setSlick = () => {
+var isMobile;
+
+const setSlick = (element) => {
 	'use strict';
 
-	if (window.innerWidth >= 900) {
-		$('.room_list').slick({
-			infinite: false,
-  			slidesToShow: 3,
-  			slidesToScroll: 3
-		});
-	} else if (window.innerWidth >= 1050) {
-		$('.room_list').slick({
-			infinite: false,
-  			slidesToShow: 4,
-  			slidesToScroll: 4
-		});
+	if (!isMobile.phone()) {
+		if (isMobile.tablet()) {
+			if (window.innerWidth > 800) {
+				$(element).slick({
+					infinite: false,
+		  			slidesToShow: 3,
+		  			slidesToScroll: 3
+				});
+			}
+		} else {
+			$(element).slick({
+				infinite: false,
+	  			slidesToShow: 4,
+	  			slidesToScroll: 4
+			});
+		}
 	}
 };
 
@@ -49,12 +55,7 @@ const roomingView = (prevStep, currentStep, nextStep, list) => {
 
 	$('.gallery').slick();
 
-	if (currentStep.is(':visible')) {
-		// set initial slick
-		setSlick();
-		// on resize listener
-		$(window).resize(setSlick);
-	}
+	setSlick('.room_list');
 
 	$('.back').click(event => {
 		event.preventDefault();
@@ -99,6 +100,8 @@ const initApp = () => {
 
 $(document).ready(() => {
 	'use strict';
+
+	isMobile = new MobileDetect(window.navigator.userAgent);
 
 	initApp();
 
