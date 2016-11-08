@@ -55,7 +55,22 @@
 		.form_control {
 			margin-bottom: 0px;
 		}
+
+		p {
+			text-align: right;
+		}
 	}
-	@media #{$breakpoint-laptop-small} {}
+	@media #{$breakpoint-laptop-small} {
+		article {
+			max-width: $secure-area-laptop;
+			margin: 0 auto;
+		}
+	}
+
+	@media #{$breakpoint-laptop-big} {
+		article {
+			max-width: $secure-area;
+		}
+	}
 }
 

@@ -28,6 +28,7 @@ body {
 .main-container {
   @include size(100%, auto);
   padding: 16px 8px;
+  overflow: hidden;
 
   &.welcomeActive {
     margin-top: 62px;

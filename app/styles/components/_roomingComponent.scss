@@ -29,7 +29,7 @@
 		margin-bottom: 30px;
 	}
 
-	#btn_tips {
+	.btn_tips {
 		margin-bottom: 25px;
 	}
 
@@ -67,6 +67,14 @@
 	@media #{$breakpoint-tablet-land} {
 		&_container {
 			padding-top: 0px;
+			position: relative;
+		}
+
+		.btn_tips {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			margin-bottom: 0px;
 		}
 		h1 {
 			@include font-size(26px);
@@ -112,6 +120,7 @@
 	@include size(100%, auto);
 	overflow: hidden;
 	margin-bottom: 30px;
+	position: relative;
 
 	header {
 		text-align: center;

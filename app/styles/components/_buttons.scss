@@ -37,6 +37,16 @@
     }
   }
 
+  &_tips {
+    @include size(100%, 44px);
+    background-color: $lightBlue;
+    border: 1px solid $lightBlue;
+    // texts
+    font-family: $montserratBold;
+    @include font-size(20px);
+    @include line-height(44px);
+  }
+
   &_default {
     @include size(100%, 44px);
     // texts
@@ -93,14 +103,19 @@
 
   @media #{$breakpoint-tablet-land} {
     &_primary {
-      //height: 50px;
-      //@include line-height(50px);
       @include font-size(20px);
 
       &:hover {
         background-color: $lightBlue2;
         border: 1px solid $lightBlue2;
       }
+    }
+
+    &_tips {
+      @include size(137px, 37px);
+      @include font-size(13px);
+      @include line-height(13px);
+      padding: 0 12px;
     }
 
     &_navigation {

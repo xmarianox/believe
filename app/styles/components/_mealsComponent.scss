@@ -34,12 +34,12 @@
 		margin-bottom: 30px;
 	}
 
-	#btn_tips_meals,
-	#btn_tips_surf_yoga,
-	#btn_tips_transportation,
-	#btn_tips_resume {
-		margin-bottom: 25px;
-	}
+	// #btn_tips_meals,
+	// #btn_tips_surf_yoga,
+	// #btn_tips_transportation,
+	// #btn_tips_resume {
+	// 	margin-bottom: 25px;
+	// }
 
 	// =============================================================================
 	// - Responsive
@@ -69,6 +69,30 @@
 				@include line-height(20px);
 				margin-bottom: 45px;
 			}
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		&_container {
+			padding-top: 0px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.btn_tips {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			margin-bottom: 0px;
+		}
+		h1 {
+			@include font-size(26px);
+			@include line-height(48px);
+			margin-top: 50px;
+		}
+		p {
+			@include font-size(14px);
+			@include line-height(19px);
 		}
 	}
 
@@ -157,7 +181,7 @@
 
 		header {
 			h2 {
-				@include font-size(16px);
+				@include font-size(15px);
 			}
 			p {
 				@include font-size(15px);

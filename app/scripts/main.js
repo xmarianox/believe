@@ -121,7 +121,7 @@ $(document).ready(() => {
 	$('.open_modal').click(event => {
 		event.preventDefault();
 		let currentItem = $(event.currentTarget).attr('href');
-		console.log(currentItem);
+		//console.log(currentItem);
 		$(`${currentItem}`).addClass('visible');
 	});
 
