@@ -35,6 +35,12 @@
 		@include size(19px, 15px);
 	}
 
+	&_tips {
+		background: url(../images/icons/ic_tips.svg) center center no-repeat;
+		background-size: cover;
+		@include size(43px, 51px);
+	}
+
 	// Social
 	&_twitter {
 		background: url(../images/icons/social/ic_twitter.svg) center center no-repeat;
