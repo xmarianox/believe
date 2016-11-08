@@ -118,7 +118,7 @@ $(document).ready(() => {
 		//$('menu').toggleClass('visible');
 	});
 
-	$('.open_modal').click(event => {
+	$('.open_modal, .btn_tips').click(event => {
 		event.preventDefault();
 		let currentItem = $(event.currentTarget).attr('href');
 		//console.log(currentItem);
