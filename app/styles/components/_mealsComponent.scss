@@ -507,4 +507,23 @@
 			}
 		}
 	}
+
+
+	@media #{$breakpoint-tablet-land} {
+		.modal_header {
+			border-bottom: 1px solid $lightBlue;
+			margin-bottom: 10px;
+		}
+
+		&_tips {
+			.ic_tips {
+				display: none;
+			}
+
+			h4 {
+				@include font-size(16px);
+				@include line-height(44px);
+			}
+		}
+	}
 }
