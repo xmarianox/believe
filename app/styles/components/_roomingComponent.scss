@@ -33,6 +33,10 @@
 		margin-bottom: 25px;
 	}
 
+	&_container {
+		position: relative;
+	}
+
 	// =============================================================================
 	// - Responsive
 	// =============================================================================
@@ -67,7 +71,6 @@
 	@media #{$breakpoint-tablet-land} {
 		&_container {
 			padding-top: 0px;
-			position: relative;
 		}
 
 		.btn_tips {
@@ -185,6 +188,12 @@
 	@media #{$breakpoint-laptop-small} {
 		.amount_information {
 			padding: 16px 0px;
+		}
+	}
+
+	&.active {
+		.gallery {
+			border: 6px solid $lightBlue2;
 		}
 	}
 }

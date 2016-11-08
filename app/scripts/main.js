@@ -107,6 +107,12 @@ $(document).ready(() => {
 	if ($('.rooming').is(':visible')) {
 		$('.gallery').slick();
 		setSlick('.room_list');
+
+		$('.room_list_item').click(event => {
+			event.preventDefault();
+			let currentItem = event.currentTarget;
+			$(currentItem).addClass('active');
+		});
 	}
 
 	/**

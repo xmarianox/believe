@@ -34,6 +34,11 @@
 		margin-bottom: 30px;
 	}
 
+	&_container {
+		position: relative;
+		overflow: hidden;
+	}
+
 	// #btn_tips_meals,
 	// #btn_tips_surf_yoga,
 	// #btn_tips_transportation,
@@ -75,8 +80,6 @@
 	@media #{$breakpoint-tablet-land} {
 		&_container {
 			padding-top: 0px;
-			position: relative;
-			overflow: hidden;
 		}
 
 		.btn_tips {
@@ -465,5 +468,17 @@
 	// =============================================================================
 	&_tips {
 		border: 1px solid $lightBlue;
+		top: 0;
+		left: auto;
+	}
+
+	@media #{$breakpoint-tablet-port} {
+		&_tips {
+			max-width: 300px;
+
+			p {
+				text-align: left;
+			}
+		}
 	}
 }
