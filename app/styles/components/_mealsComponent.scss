@@ -39,12 +39,11 @@
 		overflow: hidden;
 	}
 
-	// #btn_tips_meals,
-	// #btn_tips_surf_yoga,
-	// #btn_tips_transportation,
-	// #btn_tips_resume {
-	// 	margin-bottom: 25px;
-	// }
+	.comment_container {
+		@include size(100%, auto);
+		max-width: $secure-area;
+		margin: 0 auto;
+	}
 
 	// =============================================================================
 	// - Responsive
@@ -299,6 +298,47 @@
 // =============================================================================
 // - RESUME
 // =============================================================================
+.resume {
+
+	.flex-container {
+		@include size(100%, auto);
+		// flex
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+
+	.flex-item {
+		@include size(100%, auto);
+		margin: 0 auto;
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		&_container {
+			padding: 0;
+		}
+
+		.flex-item {
+			@include size(50%, auto);
+			padding: 0 10px;
+
+			&.full {
+				@include size(100%, auto);
+				padding: 0;
+			}
+
+			form {
+				padding: 0;
+			}
+		}
+	}
+
+	@media #{$breakpoint-laptop-small} {}
+}
+
+
 .resume_item {
 	@include size(100%, auto);
 	overflow: hidden;
@@ -344,6 +384,21 @@
 				@include font-size(16px);
 				margin: auto;
 				margin-right: 0px;
+			}
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		&:last-child {
+			margin-bottom: 30px;
+		}
+
+		ul {
+			margin-bottom: 10px;
+
+			li {
+				@include size(100%, auto);
+				@include line-height(18px);
 			}
 		}
 	}
@@ -411,6 +466,26 @@
 			font-family: $montserratBold;
 			color: $lightBlue;
 			text-decoration: none;
+		}
+	}
+
+	@media #{$breakpoint-tablet-land} {
+		border-bottom: none;
+
+		ul {
+			li {
+				@include size(100%, 65px);
+
+				p, span {
+					@include font-size(18px);
+					@include line-height(28px);
+				}
+			}
+		}
+
+		.align_left {
+			@include font-size(16px);
+			@include line-height(24px);
 		}
 	}
 }

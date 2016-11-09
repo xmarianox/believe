@@ -106,7 +106,7 @@
 	@media #{$breakpoint-tablet-land} {
 		text-align: right;
 		p {
-			text-align: right;
+			text-align: right !important;
 		}
 	}
 }
