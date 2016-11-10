@@ -320,3 +320,126 @@
 		}
 	}
 }
+
+// =============================================================================
+// - ROOM MODAL
+// =============================================================================
+.rooming_modal {
+	@include size(100%, auto);
+	max-width: $secure-area-laptop;
+	border: 1px solid $lightBlue;
+	background-color: $white;
+	overflow: hidden;
+	padding: 16px;
+	margin: 0 auto;
+	
+	// postion
+	position: absolute;
+	top: 150px;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	z-index: 20;
+
+	//flex
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	justify-content: space-between;
+
+	@media #{$breakpoint-laptop-small} {
+		max-width: $secure-area;
+	}
+
+	.btn_close_modal {
+		position: absolute;
+		right: 16px;
+	}
+}
+
+.room_item {
+	@include size(50%, auto);
+	overflow: hidden;
+	padding: 10px 14px;
+
+	&.info {
+		padding: 10px 30px;
+	}
+
+	.gallery {
+		margin-bottom: 30px;
+		img {
+			max-width: 450px;
+		}
+	}
+
+	h3 {
+		font-family: $montserratBold;
+		@include font-size(18px);
+		@include line-height(44px);
+	}
+
+	h4 {
+		font-family: $montserratRegular;
+		@include font-size(16px);
+		@include line-height(20px);
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-family: $montserratRegular;
+		text-align: left;
+		@include font-size(14px);
+		@include line-height(18px);
+	}
+
+	em {
+		font-family: $montserratSemiBold;
+		@include font-size(24px);
+		@include line-height(32px);
+		text-align: center;
+		display: block;
+	}
+
+	.btn_book {
+		display: block;
+		max-width: 240px;
+		margin: 30px auto;
+	}
+
+	.amenities_container {
+		@include size(100%, auto);
+		text-align: center;
+	}
+
+	.amenities_list {
+		@include size(100%, auto);
+		display: block;
+		padding: 10px 20px;
+		border-top: 1px solid $lightBlue;
+
+		li {
+			@include size(100%, auto);
+			margin: 14px 0;
+			//
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+
+			.ic {
+				margin: auto;
+			}
+		}
+	}
+
+	@media #{$breakpoint-laptop-small} {
+		.gallery {
+			img {
+				max-width: 499px;
+			}
+		}
+	}
+}
