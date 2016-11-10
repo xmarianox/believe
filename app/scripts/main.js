@@ -125,6 +125,20 @@ $(document).ready(() => {
 				event.preventDefault();
 				$('.accordion').removeClass('visible');
 			});
+		} else {
+
+			$('.rooming_modal .btn_close_modal').click(event => {
+				event.preventDefault();
+				$('.rooming_modal').removeClass('visible');
+			});
+
+			$('.btn_see_more').click(event => {
+				event.preventDefault();
+				$('.rooming_modal').addClass('visible');
+				$('.gallery').slick('unslick');
+				$('.gallery').slick();
+			});
+
 		}
 	}
 

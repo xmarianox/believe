@@ -342,11 +342,17 @@
 	z-index: 20;
 
 	//flex
-	display: flex;
+	display: none;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: stretch;
 	justify-content: space-between;
+
+
+	&.visible {
+		display: flex;
+		@include fade-in(100ms);
+	}
 
 	@media #{$breakpoint-laptop-small} {
 		max-width: $secure-area;
