@@ -121,7 +121,7 @@
 
 .room_list_item {
 	@include size(100%, auto);
-	overflow: hidden;
+	//overflow: hidden;
 	margin-bottom: 30px;
 	position: relative;
 
@@ -194,6 +194,61 @@
 	&.active {
 		.gallery {
 			border: 6px solid $lightBlue2;
+		}
+	}
+}
+
+.accordion {
+	@include size(100%, auto);
+	background-color: $white;
+	overflow: hidden;
+	display: none;
+	//
+	position: absolute;
+	z-index: 10;
+	top: 83%;
+	left: 0;
+	right: 0;
+
+	&.visible {
+		display: block;
+		@include fade-in(100ms);
+	}
+
+	p {
+		@include font-size(14px);
+		@include line-height(18px);
+		text-align: left;
+		margin: 30px 0;
+	}
+
+	h4 {
+		font-family: $montserratRegular;
+		@include font-size(18px);
+		@include line-height(18px);
+		text-align: center;
+		margin-bottom: 16px;
+	}
+
+	.amenities_list {
+		@include size(100%, auto);
+		display: block;
+		padding: 10px 20px;
+		border-top: 1px solid $lightBlue;
+
+		li {
+			@include size(100%, auto);
+			margin: 14px 0;
+			//
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+
+			.ic {
+				margin: auto;
+			}
 		}
 	}
 }

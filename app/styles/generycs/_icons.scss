@@ -59,4 +59,42 @@
 		background-size: cover;
 		@include size(18px, 18px);
 	}
+
+	// amenities
+	&_air_conditioner {
+		background: url(../images/icons/services/air-conditioner.svg) center center no-repeat;
+		background-size: cover;
+		@include size(32px, 37px);
+	}
+
+	&_pool {
+		background: url(../images/icons/services/swimming-pool.svg) center center no-repeat;
+		background-size: cover;
+		@include size(42px, 35px);
+	}
+
+	&_wifi {
+		background: url(../images/icons/services/wifi.svg) center center no-repeat;
+		background-size: cover;
+		@include size(47px, 34px);
+	}
+
+	&_dishwasher {
+		background: url(../images/icons/services/dishwasher.svg) center center no-repeat;
+		background-size: cover;
+		@include size(32px, 37px);
+	}
+
+	&_tv {
+		background: url(../images/icons/services/tv.svg) center center no-repeat;
+		background-size: cover;
+		@include size(37px, 37px);
+	}
+
+	&_parking {
+		background: url(../images/icons/services/parking.svg) center center no-repeat;
+		background-size: cover;
+		@include size(31px, 31px);
+	}
+
 }

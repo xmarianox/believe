@@ -113,6 +113,17 @@ $(document).ready(() => {
 			let currentItem = event.currentTarget;
 			$(currentItem).addClass('active');
 		});
+
+		$('.btn_see_more').click(event => {
+			event.preventDefault();
+			let currentItem = $(event.currentTarget).attr('data-rel');
+			$(currentItem).addClass('visible');
+		});
+
+		$('.btn_see_less').click(event => {
+			event.preventDefault();
+			$('.accordion').removeClass('visible');
+		});
 	}
 
 	/**
