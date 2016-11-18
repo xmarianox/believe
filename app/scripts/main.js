@@ -68,41 +68,72 @@ const roomingView = (prevStep, currentStep, nextStep, list) => {
 	});
 };
 
-const initApp = () => {
+const goToStep = (step) => {
 	'use strict';
 
+	var steps = [];
 	// steps views
-	let step0 = $('.welcome');
-	let step1 = $('.rooming');
-	let step2 = $('.meals');
-	let step3 = $('.surf_yoga');
-	let step4 = $('.transportation');
-	let step5 = $('.resume');
-	//let currentSelectionBar = $('#current_selection');
-	let stepsList = $('.steps ol').children();
+	steps[0] = $('.welcome');
+	steps[1] = $('.rooming');
+	steps[2] = $('.meals');
+	steps[3] = $('.surf_yoga');
+	steps[4] = $('.transportation');
+	steps[5] = $('.resume');
 
-	// set initial state;
-	step0.show();
+	for(var s = 0; s <= 5; s++){
+		if(s === step){
+			steps[s].show();
+		}
+		else{
+			steps[s].hide();
+		}
+	}
 
-	//currentSelectionBar.hide();
-	step1.hide();
-	step2.hide();
-	step3.hide();
-	step4.hide();
-	step5.hide();
+	$('.steps_active').text(step);
 
-	$('#form_start_calculator').submit((event) => {
-		event.preventDefault();
-		roomingView(step0, step1, step2, stepsList);
-	});
+	if (step === 1) {
+		$('.gallery').slick();
+		setSlick('.room_list');
+
+		$('.room_list_item').click(function (event) {
+			event.preventDefault();
+			var currentItem = event.currentTarget;
+			$('.room_list_item.active').removeClass('active');
+			$(currentItem).addClass('active');
+		});
+
+		if (isMobile.phone()) {
+			$('.btn_see_more').click(function (event) {
+				event.preventDefault();
+				var currentItem = $(event.currentTarget).attr('data-rel');
+				$(currentItem).addClass('visible');
+			});
+
+			$('.btn_see_less').click(function (event) {
+				event.preventDefault();
+				$('.accordion').removeClass('visible');
+			});
+		} else {
+
+			$('.rooming_modal .btn_close_modal').click(function (event) {
+				event.preventDefault();
+				$('.rooming_modal').removeClass('visible');
+			});
+
+			$('.btn_see_more').click(function (event) {
+				event.preventDefault();
+				$('.rooming_modal').addClass('visible');
+				$('.gallery').slick('unslick');
+				$('.gallery').slick();
+			});
+		}
+	}
 };
 
 $(document).ready(() => {
 	'use strict';
 
 	isMobile = new MobileDetect(window.navigator.userAgent);
-
-	//initApp();
 
 	if ($('.rooming').is(':visible')) {
 		$('.gallery').slick();
@@ -111,6 +142,7 @@ $(document).ready(() => {
 		$('.room_list_item').click(event => {
 			event.preventDefault();
 			let currentItem = event.currentTarget;
+			$('.room_list_item.active').removeClass('active');
 			$(currentItem).addClass('active');
 		});
 

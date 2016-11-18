@@ -99,19 +99,19 @@
 
       <section class="steps">
         <ol>
-          <li><a href="" title="1. ROOMING">1. ROOMING</a></li>
-          <li><a href="" title="2. MEALS">2. MEALS</a></li>
-          <li><a href="" title="3. SURF, YOGA & BEYOND">3. SURF, YOGA & BEYOND</a></li>
-          <li><a href="" title="4. TRANSPORTATION">4. TRANSPORTATION</a></li>
-          <li><a href="" title="5. CONFIRM & SUBMIT">5. CONFIRM & SUBMIT</a></li>
-          <li class="active"><a href="" title="STEP 0 OF 5">STEP <span class="steps_active">0</span> OF 5</a></li>
+          <li><a href="#" title="1. ROOMING" onclick="goToStep(1);">1. ROOMING</a></li>
+          <li><a href="#" title="2. MEALS" onclick="goToStep(2);">2. MEALS</a></li>
+          <li><a href="#" title="3. SURF, YOGA & BEYOND" onclick="goToStep(3);">3. SURF, YOGA & BEYOND</a></li>
+          <li><a href="#" title="4. TRANSPORTATION" onclick="goToStep(4);">4. TRANSPORTATION</a></li>
+          <li><a href="#" title="5. CONFIRM & SUBMIT" onclick="goToStep(5);">5. CONFIRM & SUBMIT</a></li>
+          <li class="active"><a href="#" title="STEP 0 OF 5">STEP <span class="steps_active">0</span> OF 5</a></li>
         </ol>
       </section>
 
       <!--
       // PASO - 0 - Welcome
       -->
-      <section class="welcome" style="display: none">
+      <section class="welcome">
         <article class="welcome_container">
           <h1>WELCOME TO THE CUSTOMIZER</h1>
 
@@ -154,7 +154,7 @@
             </div>
 
             <div class="form_control">
-              <button class="btn btn_primary" id="#btn_start">START</button>
+              <button class="btn btn_primary" id="#btn_start" onclick="goToStep(1);">START</button>
             </div>
           </form>
 
@@ -167,7 +167,7 @@
       <!--
       // PASO - 1 - ROOMING
       -->
-      <section class="rooming" ><!-- style="display: none" -->
+      <section class="rooming" style="display: none">
         <article class="rooming_container">
           <a href="#mdl_stp1" class="btn btn_tips"><span>TIPS BEFORE<br class="visible_desktop"> CLICKING NEXT</span></a>
 
@@ -793,8 +793,8 @@
               <textarea name="comments_box" id="comments_box" placeholder="Write your comment here."></textarea>
 
               <div class="flex-navigation">
-                <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
-                <button class="btn btn_navigation next"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
+                <button class="btn btn_navigation back" onclick="goToStep(0);"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+                <button class="btn btn_navigation next" onclick="goToStep(2);"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
               </div>
             </div>
           </div>
@@ -943,8 +943,8 @@
               <textarea name="comments_box" id="comments_box" placeholder="Write your comment here."></textarea>
 
               <div class="flex-navigation">
-                <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
-                <button class="btn btn_navigation next"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
+                <button class="btn btn_navigation back" onclick="goToStep(1);"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+                <button class="btn btn_navigation next" onclick="goToStep(3);"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
               </div>
             </div>
           </div>
@@ -1176,8 +1176,8 @@
               <textarea name="comments_box" id="comments_box" placeholder="Write your comment here."></textarea>
 
               <div class="flex-navigation">
-                <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
-                <button class="btn btn_navigation next"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
+                <button class="btn btn_navigation back" onclick="goToStep(2);"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+                <button class="btn btn_navigation next" onclick="goToStep(4);"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
               </div>
             </div>
           </div>
@@ -1351,8 +1351,8 @@
               <textarea name="comments_box" id="comments_box" placeholder="Please write here: flight number, airline, landing / departure date and time."></textarea>
 
               <div class="flex-navigation">
-                <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
-                <button class="btn btn_navigation next"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
+                <button class="btn btn_navigation back" onclick="goToStep(3);"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+                <button class="btn btn_navigation next" onclick="goToStep(5);"><span>NEXT</span> <i class="ic ic_arrow_navigation_next"></i></button>
               </div>
             </div>
           </div>
@@ -1520,8 +1520,8 @@
               <textarea name="comments_box" id="comments_box" placeholder="Write your comment here."></textarea>
 
               <div class="flex-navigation">
-                <button class="btn btn_navigation back"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
-                <button class="btn btn_navigation"><span>SUBMIT</span></button>
+                <button class="btn btn_navigation back" onclick="goToStep(4);"><i class="ic ic_arrow_navigation_back"></i> <span>BACK</span></button>
+                <button class="btn btn_navigation" onclick="goToStep(0);"><span>SUBMIT</span></button>
               </div>
             </div>
           </div>
