@@ -1,0 +1,9 @@
+.main-image-container {
+    @include size(100%, auto);
+    overflow: hidden;
+
+    img {
+        @include size(100%, auto);
+        
+    }
+}
