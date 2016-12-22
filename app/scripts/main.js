@@ -121,7 +121,6 @@ const goToStep = (step) => {
 				$('.accordion').removeClass('visible');
 			});
 		} else {
-
 			$('.rooming_modal .btn_close_modal').click(function (event) {
 				event.preventDefault();
 				$('.rooming_modal').removeClass('visible');
@@ -146,6 +145,37 @@ $(document).ready(() => {
 
 	if ($('.vacation-package').is(':visible')) {
 		$('.gallery').slick();
+
+		$('.room_list_item').click(function (event) {
+			event.preventDefault();
+			var currentItem = event.currentTarget;
+			$('.room_list_item.active').removeClass('active');
+			$(currentItem).addClass('active');
+		});
+		if (isMobile.phone()) {
+			$('.btn_see_more').click(function (event) {
+				event.preventDefault();
+				var currentItem = $(event.currentTarget).attr('data-rel');
+				$(currentItem).addClass('visible');
+			});
+
+			$('.btn_see_less').click(function (event) {
+				event.preventDefault();
+				$('.accordion').removeClass('visible');
+			});
+		} else {
+			$('.rooming_modal .btn_close_modal').click(function (event) {
+				event.preventDefault();
+				$('.rooming_modal').removeClass('visible');
+			});
+
+			$('.btn_see_more').click(function (event) {
+				event.preventDefault();
+				$('.rooming_modal').addClass('visible');
+				$('.gallery').slick('unslick');
+				$('.gallery').slick();
+			});
+		}
 	}
 
 	/**

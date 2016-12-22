@@ -173,30 +173,30 @@
 
                     <form id="form_start_calculator">
                         <div class="form_control flex">
-                        <div class="date_control">
-                            <input type="date" name="desde" placeholder="CHECK IN">
-                        </div>
-                        <div class="date_divider">
-                            <i class="ic ic_arrow_right"></i>
-                        </div>
-                        <div class="date_control">
-                            <input type="date" name="hasta" placeholder="CHECK OUT">
-                        </div>
+                            <div class="date_control">
+                                <input type="date" name="desde" placeholder="CHECK IN">
+                            </div>
+                            <div class="date_divider">
+                                <i class="ic ic_arrow_right"></i>
+                            </div>
+                            <div class="date_control">
+                                <input type="date" name="hasta" placeholder="CHECK OUT">
+                            </div>
                         </div>
 
                         <div class="form_control select_control">
-                        <div class="select_container">
-                            <select>
-                            <option>1 guest</option>
-                            <option>2 guest</option>
-                            <option>3 guest</option>
-                            <option>4 guest</option>
-                            </select>
-                        </div>
+                            <div class="select_container">
+                                <select>
+                                <option>1 guest</option>
+                                <option>2 guest</option>
+                                <option>3 guest</option>
+                                <option>4 guest</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="form_control">
-                        <a class="btn btn_primary" id="#btn_start" onclick="goToStep(1);">START</a>
+                            <a class="btn btn_primary" id="#btn_start" onclick="goToStep(1);">START</a>
                         </div>
                     </form>
 
@@ -221,15 +221,15 @@
                             <!-- TODO: hay que cargar la data del modal dinamicamente -->
                             <div class="modal" id="md1">
                                 <button class="btn btn_close_modal"></button>
-                                <h4>DELUXE APARTMENT</h4>
+                                <h4>Room info</h4>
                                 <ul>
-                                <li>One king size bedroom with ensuite bathroom.</li>
-                                <li>Air conditioning.</li>
-                                <li>Fully equipped kitchen.</li>
-                                <li>Jungle View Veranda.</li>
-                                <li>One king size bedroom with ensuite bathroom.</li>
-                                <li>Parking lot.</li>
-                                <li>Free Wifi.</li>
+                                    <li>One king size bedroom with ensuite bathroom.</li>
+                                    <li>Air conditioning.</li>
+                                    <li>Fully equipped kitchen.</li>
+                                    <li>Jungle View Veranda.</li>
+                                    <li>One king size bedroom with ensuite bathroom.</li>
+                                    <li>Parking lot.</li>
+                                    <li>Free Wifi.</li>
                                 </ul>
                             </div>
 
@@ -324,7 +324,7 @@
 
                             <div class="modal" id="md2">
                                 <button class="btn btn_close_modal"></button>
-                                <h4>DELUXE APARTMENT</h4>
+                                <h4>Room info</h4>
                                 <ul>
                                 <li>One king size bedroom with ensuite bathroom.</li>
                                 <li>Air conditioning.</li>
@@ -428,6 +428,70 @@
                     <hr>
 
                     <p>No payment requested at this point<br /> Please complete and submit your pre booking</p>
+
+                    <form>
+                        <div class="form_control">
+                            <input type="text" name="full_name" id="full_name" placeholder="Full Name">
+                        </div>
+
+                        <div class="form_control">
+                            <input type="email" name="email" id="email" placeholder="e-mail">
+                        </div>
+
+                        <div class="form_control">
+                            <input type="number" name="phone" id="phone" placeholder="Phone">
+                        </div>
+
+                        <div class="form_control flex">
+                            <div class="date_control">
+                                <input type="date" name="desde" placeholder="CHECK IN">
+                            </div>
+                            <div class="date_divider">
+                                <i class="ic ic_arrow_right"></i>
+                            </div>
+                            <div class="date_control">
+                                <input type="date" name="hasta" placeholder="CHECK OUT">
+                            </div>
+                        </div>
+
+                        <div class="form_control select_control">
+                            <div class="select_container">
+                                <select>
+                                <option>1 guest</option>
+                                <option>2 guest</option>
+                                <option>3 guest</option>
+                                <option>4 guest</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form_control">
+                            <h5>4 nights all inclusive package / peak season / 2 guests: U$S 1100</h5>
+
+                            <p>If you already have a your flights book please share with us the COMPLETE  flight itinerary below, as well as any other comment or request.</p>
+
+                            <textarea name="aditional_comments" id="aditional_comments" placeholder="Aditional comments"></textarea>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="">
+                                <input type="checkbox" name="" value=""> 
+                                I am aware that above rates are in U$S and include 15% government tax and adminsitration fees, but <em>any additional fee or cost from Pay Pal or my bank will be included and will be covered by myself.</em>
+                            </label>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="">
+                                <input type="checkbox" name="" value="">
+                                I agree with the <a href="">Payment and Cancelation policy</a>, and I understand that a travel insurance is mandatory to join Believe Surf and Yoga. <em>No payment is required at this stage.</em>
+                            </label>
+                        </div>
+
+                        <div class="form_control">
+                            <button class="btn btn_primary">SUBMIT</button>
+                        </div>
+                  
+                    </form>
 
                 </div>
 

@@ -456,6 +456,7 @@
 .vacation-package {
 	.room_list {
 		border-bottom: none;
+		overflow: visible;
 	}
 	.room_list_item {
 		header {
@@ -476,6 +477,11 @@
 		}
 		.modal {
 			top: 93px;
+			z-index: 5;
+
+			h4 {
+				color: $lightBlue;
+			}
 		}
 		.amount_information {
 			padding: 16px 0;
@@ -485,6 +491,9 @@
 				@include line-height(22px);
 				color: $lightBlue2;
 			}
+		}
+		.accordion {
+			top: 81.4%;
 		}
 
 	}
