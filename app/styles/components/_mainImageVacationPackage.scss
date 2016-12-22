@@ -1,9 +1,45 @@
 .main-image-container {
     @include size(100%, auto);
     overflow: hidden;
+    position: relative;
 
     img {
         @include size(100%, auto);
-        
+        display: block;
+    }
+
+    figcaption {
+        @include size(100%, auto);
+        max-width: 680px;
+        margin: 0 auto;
+        //postion
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        //texts
+        text-align: center;
+        color: $white;
+    }
+
+    // TEXTS
+    h1 {
+        font-family: $montserratSemiBold;
+        @include font-size(80px);
+        @include line-height(80px);
+
+        span {
+            @include font-size(50px);
+            @include line-height(70px);
+            text-transform: uppercase;
+            display: block;
+        }
+    }
+
+    h2 {
+        font-family: $montserratLight;
+        @include font-size(20px);
+        @include line-height(22px);
     }
 }

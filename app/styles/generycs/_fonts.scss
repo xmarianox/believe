@@ -1,6 +1,7 @@
 // =============================================================================
 // - Fonts
 // =============================================================================
+@include font-face($montserratLight, '../fonts/Montserrat-Light');
 @include font-face($montserratRegular, '../fonts/montserrat-regular-webfont');
 @include font-face($montserratSemiBold, '../fonts/montserrat-semibold-webfont');
 @include font-face($montserratBold, '../fonts/montserrat-bold-webfont');
