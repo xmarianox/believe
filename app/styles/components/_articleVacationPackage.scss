@@ -18,6 +18,33 @@
         }
     }
 
+    .icon {
+        @include size(43px, 43px);
+        display: block;
+    }
+
+    .flex-container {
+        @include size(100%, auto);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &-item {
+            @include size(100%, auto);
+            flex-basis: 100%;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+
     // texts
     h3 {
         font-family: $montserratBold;
