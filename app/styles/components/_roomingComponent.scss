@@ -449,3 +449,43 @@
 		}
 	}
 }
+
+// =============================================================================
+// - VACATION PACKAGE
+// =============================================================================
+.vacation-package {
+	.room_list {
+		border-bottom: none;
+	}
+	.room_list_item {
+		header {
+			h2 {
+				@include font-size(16px);
+				@include line-height(44px);
+				color: $darkGray;
+			}
+			.open_modal {
+				font-family: $montserratBold;
+				@include font-size(16px);
+				@include line-height(17px);
+				text-decoration: none;
+				color: $lightBlue;
+				display: inline-block;
+				vertical-align: middle;
+			}	
+		}
+		.modal {
+			top: 93px;
+		}
+		.amount_information {
+			padding: 16px 0;
+			p {
+				font-family: $montserratBold;
+				@include font-size(18px);
+				@include line-height(22px);
+				color: $lightBlue2;
+			}
+		}
+
+	}
+}
