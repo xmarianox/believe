@@ -20,6 +20,9 @@
 
     .icon {
         @include size(43px, 43px);
+        margin: auto;
+        margin-left: 0;
+        margin-right: 30px;
         display: block;
     }
 
@@ -34,13 +37,25 @@
         &-item {
             @include size(100%, auto);
             flex-basis: 100%;
+            padding-bottom: 30px;
 
             li {
+                @include size(100%, auto);
+                margin-bottom: 15px;
+                // flex
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: space-between;
+            }
+
+            span {
+                font-family: $montserratRegular;
+                @include font-size(14px);
+                @include line-height(22px);
+                margin: auto;
+                margin-left: 0;  
             }
         }
     }
@@ -54,5 +69,36 @@
         text-align: center;
         color: $darkGray;
         margin-bottom: 20px;
+    }
+
+    h4 {
+        font-family: $montserratBold;
+        @include font-size(16px);
+        @include line-height(24px);
+        text-transform: uppercase;
+        color: $darkGray;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        font-family: $montserratBold;
+        @include font-size(20px);
+        @include line-height(24px);
+        text-transform: uppercase;
+        text-align: center;
+        color: $lightBlue;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: $montserratRegular;
+        @include font-size(14px);
+        @include line-height(26px);
+        text-align: center;
+        color: $darkGray;
+
+        em {
+            font-family: $montserratBold;
+        }
     }
 }
