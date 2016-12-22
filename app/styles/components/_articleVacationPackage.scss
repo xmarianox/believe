@@ -18,6 +18,11 @@
         }
     }
 
+    .container {
+        @include size(100%, auto);
+        padding-bottom: 40px;
+    }
+
     .icon {
         @include size(43px, 43px);
         margin: auto;

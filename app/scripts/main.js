@@ -143,6 +143,11 @@ $(document).ready(() => {
 	isMobile = new MobileDetect(window.navigator.userAgent);
 
 	goToStep(0);
+
+	if ($('.vacation-package').is(':visible')) {
+		$('.gallery').slick();
+	}
+
 	/**
 	*  Menu
 	*/
