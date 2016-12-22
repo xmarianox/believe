@@ -1,0 +1,31 @@
+.vacation-package {
+    
+    article {
+        @include size(100%, auto);
+        padding: 16px;
+
+        header {
+            @include size(100%, auto);
+            padding: 16px 0;
+            text-align: center;
+
+            p {
+                font-family: $montserratRegular;
+                @include font-size(16px);
+                @include line-height(18px);
+                color: $darkGray;
+            }
+        }
+    }
+
+    // texts
+    h3 {
+        font-family: $montserratBold;
+        @include font-size(24px);
+        @include line-height(24px);
+        text-transform: uppercase;
+        text-align: center;
+        color: $darkGray;
+        margin-bottom: 20px;
+    }
+}
