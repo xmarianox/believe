@@ -3,7 +3,7 @@
 // =============================================================================
 .appbar {
 	@include size(100%, auto);
-	padding: 6px 16px;
+	padding: 6px 8px;
 	background: $white;
 	overflow: hidden;
 	// position
@@ -20,13 +20,21 @@
 	justify-content: space-between;
 
 	.social {
-		margin: auto 18px auto auto;
+		margin: auto 10px auto auto;
 	}
 
 	// =============================================================================
 	// - Responsive
 	// =============================================================================
-	@media #{$breakpoint-tablet-port} {}
+	@media #{$breakpoint-smartphone-medium} {
+		padding: 6px 16px;
+
+		.social {
+			margin: auto 18px auto auto;
+		}
+	}
+
+	//@media #{$breakpoint-tablet-port} {}
 
 	@media #{$breakpoint-tablet-land} {
 		.social {

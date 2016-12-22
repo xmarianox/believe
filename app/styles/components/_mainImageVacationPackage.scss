@@ -2,15 +2,23 @@
     @include size(100%, auto);
     overflow: hidden;
     position: relative;
+    min-height: 300px;
+
+    @media #{$breakpoint-smartphone-medium} {}
 
     img {
-        @include size(100%, auto);
+        @include size(100%, 100%);
+        min-height: 300px;
+        object-fit: cover;
         display: block;
+    
+        @media #{$breakpoint-tablet-land} {
+            @include size(100%, auto);
+        }
     }
 
     figcaption {
         @include size(100%, auto);
-        max-width: 680px;
         margin: 0 auto;
         //postion
         position: absolute;
@@ -21,25 +29,75 @@
         //texts
         text-align: center;
         color: $white;
+        //flex
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @media #{$breakpoint-smartphone-big-landscape} {
+            max-width: 680px;
+        }
     }
 
     // TEXTS
     h1 {
         font-family: $montserratSemiBold;
-        @include font-size(80px);
-        @include line-height(80px);
+        @include font-size(40px);
+        @include line-height(40px);
+        margin-top: auto;
+        margin-bottom: 25px;
 
         span {
-            @include font-size(50px);
-            @include line-height(70px);
+            @include font-size(30px);
+            @include line-height(40px);
             text-transform: uppercase;
             display: block;
+        }
+
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(60px);
+            @include line-height(60px);
+            
+            span {
+                @include font-size(40px);
+                @include line-height(50px);
+            }
+        }
+
+        @media #{$breakpoint-laptop-small} {
+            @include font-size(80px);
+            @include line-height(80px);
+
+            span {
+                @include font-size(50px);
+                @include line-height(70px);
+            }
+        }
+
+        @media #{$breakpoint-laptop-pc} {
+            margin-bottom: 35px;
         }
     }
 
     h2 {
         font-family: $montserratLight;
-        @include font-size(20px);
-        @include line-height(22px);
+        @include font-size(16px);
+        @include line-height(18px);
+        margin-bottom: 30px;
+
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(20px);
+            @include line-height(22px);
+        }
+
+        @media #{$breakpoint-laptop-pc} {
+            margin-bottom: 40px;
+        }
+    }
+
+    .btn {
+        max-width: 290px;
+        margin-bottom: auto;
     }
 }
