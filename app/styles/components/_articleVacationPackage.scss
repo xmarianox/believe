@@ -21,6 +21,14 @@
     .container {
         @include size(100%, auto);
         padding-bottom: 40px;
+
+        &.booking {
+            border-bottom: 1px solid $lightBlue;
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
     }
 
     .icon {
@@ -68,8 +76,26 @@
     form {
         p {
             text-align: left;
-            margin-bottom: 15px;
         }
+    }
+
+    .booking_gallery {
+        @include size(100%, auto);
+        overflow: hidden;
+
+        img {
+            @include size(100%, auto);
+            display: block;
+        }
+
+        .slick-arrow {
+            &.slick-prev {
+                left: 10px;
+            }
+            &.slick-next {
+                right: 10px;
+            }
+        } 
     }
 
     // texts

@@ -144,7 +144,7 @@ $(document).ready(() => {
 	goToStep(0);
 
 	if ($('.vacation-package').is(':visible')) {
-		$('.gallery').slick();
+		$('.gallery, .booking_gallery').slick();
 
 		$('.room_list_item').click(function (event) {
 			event.preventDefault();
