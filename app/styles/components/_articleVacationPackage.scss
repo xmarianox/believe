@@ -65,6 +65,13 @@
         }
     }
 
+    form {
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+    }
+
     // texts
     h3 {
         font-family: $montserratBold;
@@ -106,4 +113,5 @@
             font-family: $montserratBold;
         }
     }
+
 }

@@ -16,6 +16,44 @@ input {
 	color: $gray;
 }
 
+input[type=checkbox] {
+	@include size(15px, 15px);
+	appearance: checkbox;
+}
+
+textarea {
+	@include size(100%, auto);
+	min-height: 120px;
+	border: 1px solid $gray;
+	@include border-radius(0px);
+	background-color: $white;
+	appearance: none;
+	padding: 0 8px;
+	// texts
+	font-family: $montserratRegular;
+	@include font-size(20px);
+	@include line-height(44px);
+	text-align: left;
+	color: $gray;
+}
+
+label {
+	// texts
+	font-family: $montserratRegular;
+	@include font-size(14px);
+	@include line-height(20px);
+	color: $gray;
+
+	em {
+		font-family: $montserratBold;
+	}
+
+	a {
+		font-family: $montserratBold;
+		color: $lightBlue;
+	}
+}
+
 .select_container {
 	@include size(100%, 44px);
 	border: 1px solid $gray;
