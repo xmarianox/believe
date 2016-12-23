@@ -52,6 +52,10 @@
             flex-basis: 100%;
             padding-bottom: 30px;
 
+            @media #{$breakpoint-tablet-land} {
+                flex-basis: 33%;
+            }
+
             li {
                 @include size(100%, auto);
                 margin-bottom: 15px;
@@ -74,6 +78,14 @@
     }
 
     form {
+
+        &.unwrap {
+            flex-wrap: nowrap;
+        }
+
+        @media #{$breakpoint-tablet-land} {
+            flex-wrap: wrap;
+        }
         p {
             text-align: left;
         }
@@ -138,6 +150,76 @@
         em {
             font-family: $montserratBold;
         }
+    }
+
+
+    // FOOTER
+    footer {
+        @include size(100%, auto);
+        overflow: hidden;
+        padding: 16px;
+        // flex
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        .flex-item {
+            flex-basis: 100%;
+            padding-bottom: 15px;
+
+            @media #{$breakpoint-tablet-port} {
+                flex-basis: 33%;
+            }
+
+            &:first-child {
+                p {
+                    text-align: left;
+                    margin-bottom: 25px;
+                }
+            }
+
+            &:last-child {
+                text-align: center;
+
+                .ic {
+                    display: block;
+                    margin: 0 auto 24px;
+                }
+
+                a {
+                    font-family: $montserratRegular;
+                    @include font-size(14px);
+                    @include line-height(18px);
+                    color: $darkGray;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                p {
+                     margin-top: 24px;
+                }
+            }
+
+            p {
+                @include line-height(20px);
+            }
+        }
+
+        ul {
+            li {
+                font-family: $montserratSemiBold;
+                @include font-size(14px);
+                @include line-height(30px);
+
+                a {
+                    text-decoration: none;
+                    color: $darkGray;
+                }
+            }
+        }
+    
     }
 
 }

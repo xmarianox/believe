@@ -60,6 +60,11 @@
 		@include size(18px, 18px);
 	}
 
+	&_tripadvisor {
+		background: url(../images/icons/social/ic_tripadvisor.png) center center no-repeat;
+		@include size(120px, 65px);
+	}
+
 	// amenities
 	&_air_conditioner {
 		background: url(../images/icons/services/air-conditioner.svg) center center no-repeat;

@@ -457,6 +457,14 @@
 	.room_list {
 		border-bottom: none;
 		overflow: visible;
+
+		@media #{$breakpoint-tablet-land} {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	.room_list_item {
 		header {
