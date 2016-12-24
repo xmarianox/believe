@@ -29,6 +29,11 @@
                 margin-bottom: 15px;
             }
         }
+
+        @media #{$breakpoint-laptop-small} {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
     }
 
     .icon {
@@ -54,6 +59,7 @@
 
             @media #{$breakpoint-tablet-land} {
                 flex-basis: 33%;
+                padding: 0 10px;
             }
 
             li {
@@ -78,22 +84,52 @@
     }
 
     form {
-
         &.unwrap {
             flex-wrap: nowrap;
         }
 
         @media #{$breakpoint-tablet-land} {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0;
             flex-wrap: wrap;
         }
+
+        .row {
+            flex-basis: 100%;
+
+            @media #{$breakpoint-tablet-land} {
+                // flex
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+
+                .date_control {
+                    width: 300px;
+                }
+            }
+        }
+
         p {
             text-align: left;
+        }
+
+        #submit_package {
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
         }
     }
 
     .booking_gallery {
         @include size(100%, auto);
         overflow: hidden;
+
+        @media #{$breakpoint-tablet-land} {
+            margin-top: 30px;
+        }
 
         img {
             @include size(100%, auto);
@@ -152,7 +188,6 @@
         }
     }
 
-
     // FOOTER
     footer {
         @include size(100%, auto);
@@ -174,6 +209,10 @@
             }
 
             &:first-child {
+                @media #{$breakpoint-tablet-land} {
+                    padding-right: 30px;
+                }
+
                 p {
                     text-align: left;
                     margin-bottom: 25px;
@@ -182,6 +221,10 @@
 
             &:last-child {
                 text-align: center;
+
+                @media #{$breakpoint-tablet-land} {
+                    flex-basis: 22%;
+                }
 
                 .ic {
                     display: block;
@@ -207,7 +250,11 @@
             }
         }
 
-        ul {
+        .social {
+            max-width: 180px;
+        }
+
+        .site-links {
             li {
                 font-family: $montserratSemiBold;
                 @include font-size(14px);

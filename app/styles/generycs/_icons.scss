@@ -60,6 +60,12 @@
 		@include size(18px, 18px);
 	}
 
+	&_skype {
+		background: url(../images/icons/social/ic_skype.svg) center center no-repeat;
+		background-size: cover;
+		@include size(18px, 18px);
+	}
+
 	&_tripadvisor {
 		background: url(../images/icons/social/ic_tripadvisor.png) center center no-repeat;
 		@include size(120px, 65px);

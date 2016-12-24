@@ -166,7 +166,6 @@
                    </div>
                 </div>
 
-
                 <div class="container">
                     <h3>PLAN AND QUOTE YOUR TRIP</h3>
                     <hr>
@@ -205,7 +204,6 @@
                     <p><em>PEAK:</em> Dec15th – Jan15th and Easter Week | high: Jan16th - Apr, Jun - Aug | Nov – Dec14th | <em>LOW:</em> May - Jun and Sep | <em>CLOSED:</em> Oct.</p>
                     <p><em>Easter 2017:</em> Apr10th – Apr16th | <em>Easter 2018:</em> Mar26th – Apr1st | <em>Easter 2019:</em> Apr15th – Apr21st | <em>Easter 2020:</em> Apr6 – Apr12</p>
                 </div>
-
 
                 <div class="container">
                     <h3>CHOOSE YOUR ROOM</h3>
@@ -422,7 +420,6 @@
 
                 </div>
 
-
                 <div class="container booking">
                     <h3>book your package</h3>
                     <hr>
@@ -430,19 +427,21 @@
                     <p>No payment requested at this point<br /> Please complete and submit your pre booking</p>
 
                     <form>
-                        <div class="form_control">
-                            <input type="text" name="full_name" id="full_name" placeholder="Full Name">
+                        <div class="row">
+                            <div class="form_control">
+                                <input type="text" name="full_name" id="full_name" placeholder="Full Name">
+                            </div>
+
+                            <div class="form_control">
+                                <input type="email" name="email" id="email" placeholder="e-mail">
+                            </div>
+
+                            <div class="form_control">
+                                <input type="number" name="phone" id="phone" placeholder="Phone">
+                            </div>
                         </div>
 
-                        <div class="form_control">
-                            <input type="email" name="email" id="email" placeholder="e-mail">
-                        </div>
-
-                        <div class="form_control">
-                            <input type="number" name="phone" id="phone" placeholder="Phone">
-                        </div>
-
-                        <div class="form_control flex">
+                        <div class="row">
                             <div class="form_control flex">
                                 <div class="date_control">
                                     <input type="date" name="desde" placeholder="CHECK IN">
@@ -490,7 +489,7 @@
                         </div>
 
                         <div class="form_control">
-                            <button class="btn btn_primary">SUBMIT</button>
+                            <button class="btn btn_primary" id="submit_package">SUBMIT</button>
                         </div>
                   
                     </form>
@@ -509,7 +508,6 @@
 
                 </div><!-- .container .booking -->
 
-
             </article>
 
         </section>
@@ -523,10 +521,17 @@
 
                 <p>Believe Surf & Yoga S.A.<br />
                     Santa Teresa | Costa Rica</p>
+
+                <ul class="social">
+                    <li><a href="http://facebook.com" title="Facebook" target="_blank"><i class="ic ic_facebook"></i></a></li>
+                    <li><a href="http://instagram.com" title="Instagram" target="_blank"><i class="ic ic_instagram"></i></a></li>
+                    <li><a href="http://twitter.com" title="Twitter" target="_blank"><i class="ic ic_twitter"></i></a></li>
+                    <li><a href="http://skype.com" title="Skype" target="_blank"><i class="ic ic_skype"></i></a></li>
+                </ul>
             </div>
 
             <div class="flex-item">
-                <ul>
+                <ul class="site-links">
                     <li><a href="" title="PACKAGES & RATES">PACKAGES & RATES</a></li>
                     <li><a href="" title="CUSTOMIZE YOUR TRIP NOW">CUSTOMIZE YOUR TRIP NOW</a></li>
                     <li><a href="" title="CONTACT US">CONTACT US</a></li>
