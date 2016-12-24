@@ -4,10 +4,20 @@
         @include size(100%, auto);
         padding: 16px;
 
+        @media #{$breakpoint-laptop-small} {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 0;
+        }
+
         header {
             @include size(100%, auto);
             padding: 16px 0;
             text-align: center;
+
+            @media #{$breakpoint-laptop-small} {
+                padding-bottom: 50px;
+            }
 
             p {
                 font-family: $montserratRegular;
@@ -22,17 +32,16 @@
         @include size(100%, auto);
         padding-bottom: 40px;
 
+        @media #{$breakpoint-laptop-small} {
+            padding-bottom: 50px;
+        }
+
         &.booking {
             border-bottom: 1px solid $lightBlue;
 
             p {
                 margin-bottom: 15px;
             }
-        }
-
-        @media #{$breakpoint-laptop-small} {
-            max-width: 1280px;
-            margin: 0 auto;
         }
     }
 
@@ -199,6 +208,11 @@
         flex-wrap: wrap;
         align-items: stretch;
         justify-content: space-between;
+
+        @media #{$breakpoint-laptop-small} {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
 
         .flex-item {
             flex-basis: 100%;
