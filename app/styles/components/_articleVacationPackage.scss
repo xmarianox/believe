@@ -147,9 +147,11 @@
 
         .slick-arrow {
             &.slick-prev {
+                background: url(../images/icons/ic_prev_white.svg) center center no-repeat;
                 left: 10px;
             }
             &.slick-next {
+                background: url(../images/icons/ic_next_white.svg) center center no-repeat;
                 right: 10px;
             }
         } 
