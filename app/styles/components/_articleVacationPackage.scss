@@ -52,6 +52,20 @@
         margin-right: 30px;
         margin-left: 0;
         display: block;
+
+        &.parking {
+            padding: 5px;
+        }
+
+        &.padlock {
+            padding: 5px;
+        }
+
+        &.surf, 
+        &.yoga {
+            @include size(48px, 48px);
+            margin-right: 25px;
+        }
     }
 
     .flex-container {
@@ -87,6 +101,7 @@
                 font-family: $montserratRegular;
                 @include font-size(14px);
                 @include line-height(22px);
+                color: $darkGray;
                 margin: auto;
                 margin-top: 0;
                 margin-left: 0;  
