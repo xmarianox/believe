@@ -22,7 +22,7 @@
             p {
                 font-family: $montserratRegular;
                 @include font-size(16px);
-                @include line-height(18px);
+                @include line-height(24px);
                 color: $darkGray;
             }
         }
@@ -48,8 +48,9 @@
     .icon {
         @include size(43px, 43px);
         margin: auto;
-        margin-left: 0;
+        margin-top: 0;
         margin-right: 30px;
+        margin-left: 0;
         display: block;
     }
 
@@ -87,6 +88,7 @@
                 @include font-size(14px);
                 @include line-height(22px);
                 margin: auto;
+                margin-top: 0;
                 margin-left: 0;  
             }
         }

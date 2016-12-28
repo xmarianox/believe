@@ -4,7 +4,7 @@
     position: relative;
     min-height: 300px;
 
-    @media #{$breakpoint-smartphone-medium} {}
+    //@media #{$breakpoint-smartphone-medium} {}
 
     img {
         @include size(100%, 100%);
@@ -88,7 +88,7 @@
 
         @media #{$breakpoint-tablet-land} {
             @include font-size(20px);
-            @include line-height(22px);
+            @include line-height(28px);
         }
 
         @media #{$breakpoint-laptop-pc} {
