@@ -31,6 +31,7 @@
     .container {
         @include size(100%, auto);
         padding-bottom: 40px;
+        position: relative;
 
         @media #{$breakpoint-laptop-small} {
             padding-bottom: 50px;
