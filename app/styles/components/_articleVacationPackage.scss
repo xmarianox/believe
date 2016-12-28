@@ -161,7 +161,7 @@
 
     // texts
     h3 {
-        font-family: $montserratBold;
+        font-family: $montserratSemiBold;
         @include font-size(24px);
         @include line-height(24px);
         text-transform: uppercase;
@@ -192,7 +192,7 @@
     p {
         font-family: $montserratRegular;
         @include font-size(14px);
-        @include line-height(26px);
+        @include line-height(20px);
         text-align: center;
         color: $darkGray;
 
