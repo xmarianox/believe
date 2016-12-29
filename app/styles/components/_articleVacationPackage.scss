@@ -49,7 +49,7 @@
     .icon {
         @include size(43px, 43px);
         margin: auto;
-        margin-top: 0;
+        //margin-top: 0;
         margin-right: 30px;
         margin-left: 0;
         display: block;
@@ -104,7 +104,7 @@
                 @include line-height(22px);
                 color: $darkGray;
                 margin: auto;
-                margin-top: 0;
+                //margin-top: 0;
                 margin-left: 0;  
             }
         }
